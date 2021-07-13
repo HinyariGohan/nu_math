@@ -1,0 +1,26 @@
+\begin{problem}
+  　数列$x_1, \, x_2, \, \cdots\cdots, \, x_n \, \cdots\cdots$が
+$\displaystyle x_{n+1}=2x_n+\frac{1}{2^n}$ $(n=1, \, 2, \, \cdots\cdots)$を満たすとき，
+数$a$を適当に定めれば，すべての$n=1, \, 2, \, \cdots\cdots$に対して
+不等式$\displaystyle|x_n-2^n \cdot a|\leqq\frac{1}{3}$が成り立つことを証明せよ．
+\end{problem}
+
+\noindent\kaie
+\begin{align*}
+  x_{n+1} + \bunsuu1{3\cdot 2^n} &= 2\left(x_n + \bunsuu{1}{3 \cdot 2^{n-1}}\right) \\
+  x_n + \bunsuu{1}{3\cdot 2^{n-1}} &= \left(x_1 + \bunsuu13\right) 2^{n-1}
+\end{align*}
+
+ここで，$x_1 = b$とすると，$x_n = \left(b + \bunsuu13\right) 2^{n-1} - \bunsuu1{3\cdot 2^{n-1}}$である．
+
+また，$a = \bunsuu12 \left(b + \bunsuu13\right)$とすると，
+\begin{align*}
+  \zettaiti{x_n - 2^n \cdot a} &=
+  \zettaiti{\left(b + \bunsuu13\right) 2^{n-1} - \bunsuu{1}{3\cdot 2^{n-1}} - \left(b + \bunsuu13\right) 2^{n-1}} \\
+  &=\zettaiti{- \bunsuu{1}{3\cdot 2^{n-1}}} \leq \bunsuu13
+\end{align*}
+
+したがって，すべての$n = 1,2,\cdots$に対して，不等式
+\[\zettaiti{x_n - 2^n \cdot a} \leq \frac13 \]
+が成立することが示された．
+\qed

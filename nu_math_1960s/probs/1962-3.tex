@@ -1,0 +1,75 @@
+\begin{problem}
+  　$f(x)=x^4+2x^3+ax$が極大値をもつのは，
+定数$a$がどんな範囲にある場合か。
+\end{problem}
+
+$f(x) = x^4 + 2x^3 + ax$とする．このとき，$f'(x) = 4x^3 + 6x^2 + a, f''(x) = 12x^2 + 12x$である．
+
+増減表は以下の通りになる．
+
+\RESETKEYA
+\setkeys{zogen}{
+  hensu=x,
+  ranab=-1,ranad=0,ranba=+,ranbb=0,ranbc=-,ranbd=0,ranbe=+,
+  ranca=\nearrow,rancb=a+2,rancc=\searrow,rancd=a,rance=\nearrow
+}
+\zogen(3,5)
+
+ここで，$f(x)$が極大値をもつためには，$f'(x)$の値が正から負に変わればよい．
+
+\begin{enumerate}[(i)\ ]
+  \item $a>0$のとき，
+  \RESETKEYA
+  \setkeys{zogen}{%
+  hensu=x,
+  ranad=-1,ranaf=0,
+  ranba=-,ranbb=0,ranbc=+,ranbd=a+2,ranbe=+,ranbf=a,ranbg=+,
+  ranca=\searrow,rance=\nearrow,rancg=\nearrow}
+  \zogen(3,7)
+  より不適．
+
+
+  \item $a=0$のとき，
+  \RESETKEYA
+  \setkeys{zogen}{%
+    hensu=x,
+    ranad=-1,ranaf=0,
+    ranba=-,ranbb=0,ranbc=+,ranbd=2,ranbe=+,ranbf=0,ranbg=+,
+    ranca=\searrow,rance=\nearrow,rancg=\nearrow}
+  \zogen(3,7)
+  より不適．
+
+  \item $-2<a<0$のとき，
+  \RESETKEYA
+  \setkeys{zogen}{
+    hensu=x,
+    ranad=-1,ranag=0,
+    ranba=-,ranbb=0,ranbc=+,ranbd=a+2,ranbe=+,ranbf=-,ranbg=a,ranbh=-,
+    ranbi=0,ranbj=+,
+    ranca=\searrow,rance=\nearrow,rancf=\searrow,rancj=\nearrow
+  }
+  \zogen(3,10)
+  より，$f(-1) = a+2 > 0, f(0) = a < 0$であることと，中間値の定理より，$f'(x)$は$-1<x<0$の範囲で，少なくとも1回は正から負への符号変化をする．
+
+  \item $a = -2$のとき，
+  \RESETKEYA
+  \setkeys{zogen}{%
+    hensu=x,
+    ranab=-1,ranad=0,
+    ranba=-,ranbb=0,ranbc=-,ranbd=-2,ranbe=-,ranbf=0,ranbg=+,
+    ranca=\searrow,rancc=\searrow,rance=\searrow,rancg=\nearrow}
+  \zogen(3,7)
+  より不適．
+
+  \item $a < -2$のとき，
+  \RESETKEYA
+  \setkeys{zogen}{%
+    hensu=x,
+    ranab=-1,ranad=0,
+    ranba=-,ranbb=a+2,ranbc=-,ranbd=a,ranbe=-,ranbf=0,ranbg=+,
+    ranca=\searrow,rancc=\searrow,rance=\searrow,rancg=\nearrow}
+  \zogen(3,7)
+  より不適．
+\end{enumerate}
+
+(i)～(v)より，$-2 < a < 0$のとき極大値をもつ．

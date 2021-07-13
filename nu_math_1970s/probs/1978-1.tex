@@ -1,0 +1,26 @@
+\begin{problem}
+　5次以下のどんな整式$f(x)$に対しても
+\[ \int_{-1}^1f(x)dx=af(0)+b\{ f(c)+f(-c) \} \]
+が成り立つように$f(x)$に無関係な定数$a$，$b$，$c$を定めよ．
+\end{problem}
+
+$f(x) = dx^5 + ex^4 + fx^3 + gx^2 + hx + i$ とする．
+\begin{align*}
+  &\dumyeq \dint{-1}{1}(dx^5 + ex^4 + fx^3 + gx^2 + hx + i)\,dx\\
+  &= \dint{-1}{1} (ex^4 + gx^3 + i) \,dx\\
+  &= 2\dint{0}{1} (ex^4 + gx^3 + i) \,dx\\
+  &= 2\teisekibun{\bunsuu15 ex^5 + \bunsuu13 gx^3 + ix}{0}{1}\\
+  &= \bunsuu25 e + \bunsuu23 g + 2i
+\end{align*}
+
+また，$af(0) = ai,\quad b\{f(c) + f(-c)\} = 2b(ec^4 + gc^2 + i)$である．
+
+2式の係数をそれぞれ比較して，
+$\begin{emcases}
+  2bc^4 &= \bunsuu25 \label{197811}\\
+  2bc^2 &= \bunsuu23 \label{197812}\\
+  (a+2b) &= 2 \label{197813}\\
+\end{emcases}$
+
+これをそれぞれ解いて，
+\Ans{$(a,b,c) = \left(\bunsuu89, \bunsuu59, \pm\sqrt{\bunsuu35}\right)\ (符号任意)$}

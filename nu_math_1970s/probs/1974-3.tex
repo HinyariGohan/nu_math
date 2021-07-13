@@ -1,0 +1,33 @@
+\begin{problem}
+  　底辺$a$，高さ$h$の2等辺三角形がある．
+\begin{enumerate}
+\item この3角形の内接円の半径$r$を$a$と$h$を用いて表せ．
+\item $n$が0でない整数で，$ah^n=1$を満たしながら$a$，$h$が変化するとき，
+$\displaystyle\lim_{a\to\infty}\frac{r}{a}$を求めよ．
+\end{enumerate}
+\end{problem}
+
+\noindent\kaie
+
+\begin{enumerate}
+  \item
+  \begin{mawarikomi}{}{
+\begin{pszahyou*}[ul=4mm](-0.5,7)(-0.5,10)
+  \tenretu*{A(5,0)}
+  \kandk\O{75}\A{105}\P
+  \Suisen\P\O\A\H
+  \Takakkei{\O\A\P}
+  \Drawline{\P\H}
+\end{pszahyou*}}
+この三角形の面積を$S$とすると，
+\begin{align*}
+  S &= \bunsuu12ah \\
+  \bunsuu12ah &= r\left(a + 2\sqrt{h^2 + \bunsuu{a^2}4}\right) \\
+  r &= \bunsuu{ah}{2\left(a + 2\sqrt{h^2 + \bunsuu{a^2}{4}}\right)}
+\end{align*}
+\end{mawarikomi}
+\Ans{$r = \bunsuu{ah}{2\left(a + 2\sqrt{h^2 + \bunsuu{a^2}{4}}\right)}$}
+
+\item $ah^n = 1$より，$h^n = \bunsuu1a$，したがって，$h = \left(\bunsuu1a\right)^{\frac1{n}}$
+
+\end{enumerate}

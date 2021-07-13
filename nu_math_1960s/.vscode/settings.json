@@ -1,0 +1,9 @@
+{
+    "cloudlatex.projectId": 389237,
+    "cloudlatex.outDir": ".workspace",
+    "cloudlatex.autoCompile": false,
+    "[latex]": {
+        "editor.formatOnSave": false,
+
+    }
+}

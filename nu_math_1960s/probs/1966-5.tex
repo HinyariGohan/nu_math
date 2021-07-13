@@ -1,0 +1,61 @@
+\begin{problem}
+　1次式$f_n(x)$ $(n=1, \, 2, \, 3, \cdots\cdots)$が
+$f_1(x)=1+x,\ x^2f_{n+1}(x)=x^2+x^3+\int_0^xtf_n(t)dt$
+を満たしているとき
+\begin{enumerate}
+\item $f_n(x)$ $(n=1, \, 2, \, 3, \, \cdots\cdots)$を求めよ．
+\item $\displaystyle\lim_{n\to\infty}f_n(1)$を求めよ．
+\end{enumerate}
+\end{problem}
+
+
+\begin{enumerate}
+    \item $f_n(x) = ax+ b$と表されることを数学的帰納法を用いて示す．
+    \begin{enumerate}[(i)]
+        \item
+        $n=1$のとき\quad $f_1(x) = 1 + x$より成立．
+        \item
+        $n=k$のとき\quad $f_k(x) = ax + b$とする．このとき，
+\begin{align*}
+    x^2 f_{k+1}(x) &= x^3 + x^2 + \dint{0}{x} t(at+b)\,dx\\
+    x^2 f_{k+1}(x) &= x^3 + x^2 + \teisekibun{\bunsuu12at^3 + \bunsuu12bt^2}{0}{x}\\
+    f_{k+1}(x) &= \left(1 + \bunsuu{a}{3}\right) + \left(1 + \bunsuu{b}{2}\right)
+\end{align*}
+より，$n = k + 1$のときも成立．
+\end{enumerate}
+
+(i),(ii)より，すべての自然数$n$について，$f_n(x)  = ax + b$と表される．
+
+よって，$f_n(x) = a_nx + b_n$とすると，
+\[ f_{n+1}(x) = \left(1 + \bunsuu{a_n}{3}\right)x + \left(1 + \bunsuu{b_n}{2}\right) \]
+より，
+
+\begin{numcases}{}
+    a_{n+1} = 1 + \bunsuu{a_n}{3} \label{196651} \\
+    b_{n+1} = 1 + \bunsuu{b_n}{2} \label{196652}
+\end{numcases}
+である．
+
+\eqref{196651}から，
+\begin{align*}
+    a_{n+1} - \bunsuu32 &= \bunsuu13 \left(a_n - \bunsuu32\right)\\
+    a_n - \bunsuu32 &= - \bunsuu12 \left(\bunsuu13\right)^{n-1}\\
+    a_n &= - \bunsuu12 \left(\bunsuu13\right)^{n-1} + \bunsuu32
+\end{align*}
+
+\eqref{196652}から，
+\begin{align*}
+    b_{n+1} - 2 &= \bunsuu12 (b_n -2)\\
+    b_n -2 &= -\left(\bunsuu12\right)^{n-1}\\
+    b_n &= 2 - \left(\bunsuu12\right)^{n-1}
+\end{align*}
+
+よって，\Ans{$f_n(x) = \left\{-\bunsuu12 \left(\bunsuu13\right)^{n-1} + \bunsuu32 \right\}x + 2 - \left(\bunsuu12\right)^{n-1}$}
+
+\item
+\begin{align*}
+\dlim{n \to \infty} f_n(1) &= \left\{-\bunsuu12\left(\bunsuu13\right)^{n-1} + \bunsuu32\right\} + 2 - \left(\bunsuu12\right)^{n-1} \\
+&=\bunsuu32 + 2\\
+&=\bunsuu72
+\end{align*}
+\end{enumerate}

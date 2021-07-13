@@ -1,0 +1,47 @@
+\begin{problem}
+  　$n$を3以上の自然数とする.有限複素数列$z_1,z_2,\cdots ,z_n$の各項はいずれも方程式$z^6=1$の解の一つであり,かつ,関係式$z_1+z_2+\cdots+z_n=0$を満たしているとする.
+  \begin{enumerate}
+    \item $z_1,z_2,\cdots ,z_n$の中に$1$が含まれ,$-1$が含まれていないとすれば,$\bunsuu12+\bunsuu{\sqrt{3}}{2}i, -\bunsuu12-\bunsuu{\sqrt{3}}{2}i$はいずれも$z_1,z_2,\cdots ,z_n$の中に含まれることを示せ.
+    \item $n = 6$のとき,(1)のような複素数列$z_1,z_2,\cdots ,z_n$のとり方の個数を求めよ.
+  \end{enumerate}
+\end{problem}
+\kaie  %@ごたふ　最初の空白削除%
+\begin{enumerate}
+  \item
+  $\begin{aligned}[t]
+    z^6-1 &= 0\\
+    (z+1)(z-1)(z^2+z+1)(z^2-z+1) &= 0\\
+    z &= \pm1,\pm\bunsuu12\pm\bunsuu{\sqrt{3}}{2}i \ (符号任意)\\
+  \end{aligned}$
+
+  $-\bunsuu12\pm\bunsuu{\sqrt{3}}{2}i$のいずれか一方しか$z_1,z_2,\cdots ,z_n$に含まれないとすると,$z_1+z_2+\cdots+z_n$の値に$-\sqrt{3}i$または$\sqrt{3}i$が必ず残る.したがって,$z_1+z_2+\cdots+z_n \neq 0$となるが,これは条件に矛盾する.よって,$-\bunsuu12\pm\bunsuu{\sqrt{3}}{2}i$はいずれも有限複素数列$z_1,z_2,\cdots ,z_n$に含まれる.\\
+
+  \item
+  \begin{enumerate}
+    \item $1$が$z_1,z_2,\cdots ,z_n$に3つ含まれるとき\\
+    これと同時に$-1$も3つ含まれるといえるので,複素数列$z_1,z_2,\cdots ,z_n$のとり方は,
+    \begin{center}
+      $\bunsuu{6!}{3!3!}=20個$
+    \end{center}
+    \item $1$が$z_1,z_2,\cdots ,z_n$に2つ含まれるとき\\
+    これと同時に$-\bunsuu12\pm\bunsuu{\sqrt{3}}{2}i$も2つずつ含まれるといえるので,複素数列$z_1,z_2,\cdots ,z_n$のとり方は,
+    \begin{center}
+      $\bunsuu{6!}{2!2!2!}=90個$
+    \end{center}
+    \item $1$が$z_1,z_2,\cdots ,z_n$にただ1つ含まれるとき\\
+    これと同時に$-\bunsuu12\pm\bunsuu{\sqrt{3}}{2}i$,及び$-1$が1つずつ含まれるといえるので,複素数列$z_1,z_2,\cdots ,z_n$のとり方は,
+    \begin{center}
+      $6!=720個$
+    \end{center}
+    \item $1$が$z_1,z_2,\cdots ,z_n$に1つも含まれないとき\\
+    これと同時に$-1$と$\bunsuu12\pm\bunsuu{\sqrt{3}}{2}i$が2つずつ含まれるといえるので,複素数列$z_1,z_2,\cdots ,z_n$のとり方は,
+    \begin{center}
+      $\bunsuu{6!}{2!2!2!}=90個$
+    \end{center}
+  \end{enumerate}
+  $\therefore$ \, 求める個数は,
+  \begin{center}
+    $20+90+720+90=920$
+  \end{center}
+\end{enumerate}
+\Ans{$920$個}

@@ -1,0 +1,134 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%%Creator: emathPs 2.09 tDB (CQB00260@nifty.ne.jp)
+%%BoundingBox: 0 0 182 152
+%%HiResBoundingBox: 0 0 181.50569 151.99986
+/emathsave save def
+ 0 0 0 setrgbcolor
+0.099626401 0.099626401 scale
+/arrowdict 16 dict def
+arrowdict begin
+/mtrx matrix def
+end
+/arrow
+ { arrowdict begin
+ /hekomi exch def
+ /headlength exch def
+ /halfheadthickness exch 2 div def
+ /halfthickness exch 2 div def
+ /tipy exch def /tipx exch def
+ /taily exch def /tailx exch def
+ /dx tipx tailx sub def
+ /dy tipy taily sub def
+ /arrowlength dx dx mul dy dy mul add sqrt def
+ /angle dy dx atan def
+ /base arrowlength headlength sub def
+ /hekomibase base hekomi add def
+ /savematrix mtrx currentmatrix def
+ tailx taily translate
+ angle rotate
+ 0 halfthickness neg moveto
+ hekomibase halfthickness neg lineto
+ base halfheadthickness neg lineto
+ arrowlength 0 lineto
+ base halfheadthickness lineto
+ hekomibase halfthickness lineto
+ 0 halfthickness lineto
+ closepath
+ savematrix setmatrix
+end
+} def
+/ellipsedict 8 dict def
+ellipsedict /mtrx matrix put
+/ellipse
+{ ellipsedict begin
+ /endangle exch def
+ /startangle exch def
+ /yrad exch def
+ /xrad exch def
+ /y exch def
+ /x exch def
+ /savematrix mtrx currentmatrix def
+ x y translate
+ xrad yrad scale
+ 0 0 1 startangle endangle arc
+ savematrix setmatrix
+ end
+} def
+10 setlinewidth
+[] 0 setdash
+0 setlinecap
+0 setlinejoin
+gsave
+4.9997 setlinewidth
+gsave
+4.9997 setlinewidth
+newpath 170.22324 164.60342 moveto
+170.22324 847.46918 lineto
+734.34601 1355.39505 lineto
+734.34601 672.5293 lineto
+1644.83368 672.5293 lineto
+1080.7109 164.60342 lineto
+closepath
+closepath  stroke
+grestore
+grestore
+gsave
+4.9997 setlinewidth
+newpath 1080.7109 847.46918 moveto
+1080.7109 164.60342 lineto
+170.22324 164.60342 lineto
+stroke
+grestore
+gsave
+4.9997 setlinewidth
+newpath 1080.7109 164.60342 moveto
+1080.7109 847.46918 lineto
+1644.83368 1355.39505 lineto
+stroke
+grestore
+gsave
+4.9997 setlinewidth
+newpath 734.34601 1355.39505 moveto
+1644.83368 1355.39505 lineto
+1644.83368 672.5293 lineto
+stroke
+grestore
+gsave
+4.9997 setlinewidth
+newpath 170.22324 164.60342 moveto
+734.34601 672.5293 lineto
+stroke
+grestore
+gsave
+4.9997 setlinewidth
+newpath 170.22324 847.46918 moveto
+1080.7109 847.46918 lineto
+stroke
+grestore
+gsave
+gsave
+newpath 734.34601 1355.39505 moveto
+170.22324 164.60342 lineto
+1644.83368 672.5293 lineto
+closepath
+closepath  stroke
+grestore
+grestore
+gsave
+newpath 170.22324 164.60342 moveto
+1080.7109 847.46918 lineto
+stroke
+grestore
+gsave
+newpath 1080.7109 847.46918 moveto
+1644.83368 672.5293 lineto
+stroke
+grestore
+gsave
+newpath 734.34601 1355.39505 moveto
+1080.7109 847.46918 lineto
+stroke
+grestore
+showpage
+emathsave restore
+%%EOF

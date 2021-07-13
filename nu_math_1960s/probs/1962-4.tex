@@ -1,0 +1,34 @@
+\begin{problem}
+  　任意の三次式$f(x)$に対し
+$\displaystyle\int_0^1f(x)dx=\frac{1}{2}\{ f(p)+f(q) \}$となるような$p$，$q$で
+$f(x)$に無関係なものがあることを証明せよ。
+\end{problem}
+
+$f(x) = ax^3 + bx^2 + cx + d$とする．
+
+\begin{align*}
+  \dint{0}{1}f(x) &= \dint{0}{1} (ax^3 + bx^2+  cx + d)\,dx\\
+  &=\teisekibun{\bunsuu14ax^4 + \bunsuu13bx^3 + \bunsuu12cx^2 + dx}{0}{1}\\
+  &=\bunsuu14a + \bunsuu13b + \bunsuu12c + d
+\end{align*}
+
+また，
+\begin{align*}
+  \bunsuu12\{f(p) + f(q)\} =
+  \bunsuu12(p^3 + q^3) a + \bunsuu12(p^2 + q^2) b + \bunsuu12(p+q)c + d
+\end{align*}
+より，
+\[p^3 + q^3 = \bunsuu12 かつ p^2 + q^2 = \bunsuu23 かつ， p + q = 1\]
+を満たす\ten{}{p}{q}が存在することを示せばよい．
+
+\begin{align*}
+  (p+q)^2 - 2pq &= \bunsuu23\\
+  pq &= \bunsuu16\\
+  (p+q)(p^2-pq+q^2) &= \bunsuu12
+\end{align*}
+
+解と係数の関係から，
+\[6x^2 - 6x + 1 = 0\]
+を満たす有理数$x$が存在すればよい．
+
+この式を解くと，$x = \bunsuu{3\pm\sqrt{3}}{6}$より，有理数$x$が存在するため，題意は示された．

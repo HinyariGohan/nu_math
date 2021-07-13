@@ -1,0 +1,36 @@
+\begin{problem}
+  　放物線$y=x^2$上の異なる3点$(x_1, \, y_1)$，$(x_2, \, y_2)$，$(x_3, \, y_3)$における法線が1点で交わるとき，
+$x_1+x_2+x_3=0$であることを証明せよ．
+（曲線上の1点で，接線に垂直な直線を，その点における曲線の法線という）
+\end{problem}
+
+\ten{}{x_1}{y_1} における$y=x^2$の法線の方程式は，
+\begin{align}
+  y = -\bunsuu{1}{2x_1}(x-x_1) - {x_1}^2 \label{197131}
+\end{align}
+同様にして，\ten{}{x_2}{y_2} における場合は，
+\begin{align}
+  y = -\bunsuu{1}{2x_2}(x-x_2) + {x_2}^2 \label{197132}
+\end{align}
+\eqref{197131}，\eqref{197132}を連立して，
+\begin{align*}
+  -\bunsuu{1}{2x_1}x + {x_1}^2 + \bunsuu12 &= -\bunsuu1{2x_2}x + {x_2}^2 + \bunsuu12\\
+  -\bunsuu12\left(\bunsuu{1}{x_1} - \bunsuu{1}{x_2}\right)x &= {x_2}^2 - {x_1}^2\\
+  x&=2({x_1}^2-{x_2}^2) \cdot \left(\bunsuu{x_1x_2}{x_2-x_1}\right)\\
+  &=2(x_1-x_2)(x_1 + x_2) \cdot \bunsuu{x_1x_2}{x_2-x_1}\\
+  &=-2x_1x_2(x_1+x_2)
+\end{align*}
+
+したがって，交点\ten{}{x}{y}$=$\ten{}{-2x_1x_2(x_1+x_2)}{{x_1}^2+x_1x_2+{x_2}^2+\bunsuu12}
+である．
+
+\ten{}{x_3}{y_3} における法線も同じ点で交わるから，
+\begin{align*}
+  {x_1}^2 + x_1x_2 + {x_2}^2 + \bunsuu12 &= -\bunsuu{1}{2x_3}\{-2x_1x_2(x_1+x_2)\} + {x_2}^2 + \bunsuu12 \\
+  {x_1}^2 + x_1x_2 + {x_2}^2 &= \bunsuu{x_1x_2(x_1+x_2)}{x_3} + x_3^2\\
+  0 &= x_3^3 - x_3({x_1}^2 + x_1x_2 + {x_2}^2) + x_1x_2(x_1+x_2) \\
+  0 &= (x_3+x_2+x_1)(x_3-x_1)(x_3-x_2)
+\end{align*}
+ここで，$x_3 \neq x_1, x_3 \neq x_1$であるから，$x_3 + x_2 + x_1 = 0$である．
+\hfill
+(証明終了)

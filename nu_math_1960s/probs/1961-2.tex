@@ -1,0 +1,127 @@
+\begin{problem}
+    \begin{enumerate}
+\item 平面上で座標の原点を$O$とし，第1象限内にある点$A$の座標を$(a, \, b)$とする。
+$A$を通って$x$軸の正の部分，$y$軸の正の部分とそれぞれ$P$，$Q$で交わる直線を引いて，
+三角形$OPQ$の面積が1になるようにするには，
+直線$PQ$の傾き（勾配）をどのような値にとればよいか。
+また，このようなことが可能であるための点$A$の存在範囲を求めて，
+これを図示せよ。
+\item ある試験で$A$組と$B$組の全員が受験し，
+その成績の平均点を少数第2位以下を四捨五入して求めたところ，
+全体では73.2，$A$組では70.5，$B$組では75.6であった。
+$A$，$B$ 2組の人数の合計が100人ならば，$A$組の人数はどのような範囲にあるか。
+\end{enumerate}
+\end{problem}
+
+\begin{enumerate}
+    \item PQの直線の傾きを$m$として，$\ell :y = m(x-a) + b$とおく．
+    （ただし，条件より $m<0$）
+
+    このとき，P,Q の座標はそれぞれ，
+    \tenbig{P}{a-\bunsuu{b}{m}}{0},
+    \ten{Q}{0}{-am+b}
+    となる．
+
+    このとき，\sankaku{OPQ} の面積$S$は，
+    \begin{align*}
+        S &= \bunsuu{1}{2}\left(a = \bunsuu{b}{m}\right)(-am + b)\\
+        &=\bunsuu12 \left(-a^2m + ab + ab - \bunsuu{b^2}{m}\right)\\
+        &=-\bunsuu{1}{2m} (a^2m^2-2abm+b^2)\\
+        &=-\bunsuu{1}{2m} (am-b)^2 = 1
+    \end{align*}
+
+    よって，$\houteisiki{(am-b)^2=-2m} \label{196121}$
+
+    傾き$m$は，
+    \[(am-b)^2 = -2m \quad (m<0)\]
+    を満たせばよい．
+
+    $\eqref{196121} \doti a^2m^2-2abm+2m+b^2 = 0$\quad
+    であり，$m<0$において，この式が成り立てばよいので，
+    \[m:y=a^2m^2-2(ab-1)m + b^2\]
+    とおくと，
+    \begin{align}
+        (mの軸) &< 0 \label{196122}\\
+        y_{lm} &> 0 \label{196123}\\
+        (y = 0 についての判別式D) &\geq 0 \label{196124}
+    \end{align}
+    であればよい．
+
+    \eqref{196122}より，$ab-1<0 \doti ab < 1$
+
+    \eqref{196123}より，$b^2 > 0$
+
+    \eqref{196124}より，
+    \begin{align*}
+        D &= (ab-1)^2-a^2b^2\\
+        &=-2ab + 1\geq 0
+        &2ab \leq 1 \Y ab \leq \bunsuu12
+    \end{align*}
+
+    よって，上記より求める点Aの存在範囲は下図の斜線部分
+    （ただし$x$軸，$y$軸の境界を除く）
+
+    \begin{center}
+        \begin{pszahyou}[ul=12mm](-0.5,3)(-0.5,3)
+            \def\Fx{1/(2*X)}
+            \def\Gx{0}
+            \YNurii*\Fx\Gx{0.01}{3}
+            \YGurafu*\Fx
+        \end{pszahyou}
+    \end{center}
+    \KOTAE
+
+
+    \item 全体の平均値を$U$，A組の平均値を$A$，B組の平均値を$B$とおく．ここで，A組の人数を$a$とおくと，
+    \begin{align}
+        U = \bunsuu{a \cdot A + (100-a) \cdot B}{100} \label{196121}
+    \end{align}
+
+    条件より，\begin{align*}
+        73.15 \leq U < 73.25 \\
+        70.45 \leq A < 70.55 \\
+        75.55 \leq B < 75.65
+    \end{align*}
+
+    \begin{align}
+        \eqref{196121} &\doti 100U = a(A-B) + 100B \\
+        &\doti a = 100 \bunsuu{U-B}{A-B} \label{196122}\\
+        & =100 \left(1 + \bunsuu{U-A}{A-B}  \label{196123}\right)
+    \end{align}
+
+    \begin{enumerate}
+        \item $a$が最小値をとるときを考える．
+
+        $B$を固定したとき$a$が最小となるのは，$U$が最大であり，$A$が最小のときである．
+        $(\nazenara \eqref{196122})$
+
+        このとき，$U - A < 2.8, -5.2 < A-B < -5.1$である．
+
+        よって，$-\bunsuu{2.8}{5.1} < \bunsuu{U-A}{A-B}$
+
+        したがって，\begin{align*}
+            a &> 100\left(1-\bunsuu{2.8}{5.1}\right)\\
+            &=100 \cdot \bunsuu{13-4}{13}\\
+            &=100 \cdot \bunsuu{9}{13}\\
+            &=69.2\ldots
+        \end{align*}
+
+        \item $a$が最大値をとるときを考える．
+
+        $B$を固定したとき$a$が最大値をとるには，$U$が最小，$A$が最大の時である．
+        $(\nazenara \eqref{196122})$
+
+        このとき，$U - A > 2.6, -5.1 < A - B < -5$である．
+
+        よって，$\bunsuu{U-A}{A-B} < -\bunsuu{2.6}{5.1}$
+
+        したがって，\begin{align*}
+            a &< 100\left(1-\bunsuu{2.6}{5.1}\right)\\
+            &= 100\left(\bunsuu{7-2}{7}\right) \\
+            &= 100 \cdot \bunsuu57 = 71.4\ldots
+        \end{align*}
+    \end{enumerate}
+
+    (i), (ii) より,$a= 70.71$
+    \Ans{$a = 70.71$}
+\end{enumerate}

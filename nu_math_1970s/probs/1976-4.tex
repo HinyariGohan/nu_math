@@ -1,0 +1,28 @@
+\begin{problem}
+  　$x^3$の係数が1であるような3次関数$f(x)$のうちで，
+定積分$\displaystyle I=\int_{-1}^1 {\{ f(x) \}}^2dx$を
+最小にするものを決定し，そのときの$I$の値を求めよ．
+\end{problem}
+
+$f(x) = x^3 + ax^2 + bx + c$とする．このとき，$I$を計算すると，
+\begin{align*}
+  I &= \dint{-1}{1}\{f(x)\}^2\,dx\\
+  &= \dint{-1}{1}\{x^6 + 2ax^5 + (a^2 + 2b)x^4 + (2ab + 2c)x^3 + (2ac + b^2)x^2 + 2bcx + c^2\}\,dx\\
+  &= \dint{-1}{1}\{x^6 + (a^2 + 2b)x^4 + (2ac + b^2)x^2 + c^2\}\,dx\\
+  &= 2\dint{0}{1}\{x^6 + (a^2 + 2b)x^4 + (2ac + b^2)x^2 + c^2\}\,dx\\
+  &= 2\teisekibun{\bunsuu17x^7 + \bunsuu15(a^2+2b)x^5 + \bunsuu13(2bc + b^2)x^3 + c^2x}{0}{1}\\
+  &= 2\left\{\bunsuu17 + \bunsuu15(a^2+2b) + \bunsuu13(2bc + b^2) + c^2\right\}
+\end{align*}
+である．
+
+$g(b) = \bunsuu13b^2 + \bunsuu25b$とする．このとき，$g'(b) = \bunsuu23b + \bunsuu25$であり，$g(b)$は$b = -\bunsuu35$のとき最小値をとる．
+\begin{align*}
+  h(a,c) &= \bunsuu15a^2 + \bunsuu23ac + c^2 \\
+  &= \left(c + \bunsuu13a\right)^2 + \bunsuu{4}{45}a^2 \geq 0
+\end{align*}
+であるから，$(a,c) = (0, 0)$のとき，最小値$0$をとる．
+
+$I$を最小にする$f(x) = x^3-\bunsuu25x$であり，そのときの$I$は
+$I = 2\left(\bunsuu17 - \bunsuu3{25}\right) = \bunsuu8{175}$
+
+\Ans{$I = \bunsuu8{175}$}

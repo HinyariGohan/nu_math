@@ -1,0 +1,62 @@
+\begin{problem}
+　直線上を動く点があって，時刻$t$におけるその座標$x$は
+\[ x=\sin t+3\sin2t \]
+で与えられている。
+\begin{enumerate}
+\item 時刻$t=0$におけるこの点の速度および加速度を求めよ。
+\item $0 \leqq t \leqq \pi$のとき，点の動く範囲を求めよ。
+\item 時刻$t$における速度を$v$とするとき
+$\displaystyle\int_0^\pi v^2dt$を計算せよ。
+\end{enumerate}
+\end{problem}
+
+\begin{enumerate}
+  \item 求める速度を$v$，加速度を$a$とする．
+
+  \Ans{$v = \bunsuu{dx}{dt} = \cos t + 6 \cos 2t$}
+
+  \Ans{$a = \bunsuu{dv}{dt} = -\sin t - 12 \sin 2t$}
+
+  \item \begin{align*}
+    v &= 6(\cos^2t-\sin^2t) + \cos t\\
+    &= 6(2\cos^2t-1) + \cos t\\
+    &= 12\cos^2 t + \cos t - 6
+  \end{align*}
+
+  $v = 12\cos^2t + \cos t - 6 = 0$を解く．
+
+  その解における時間$t$について$t = \alpha,\beta$とすると，
+  $\cos \alpha = \bunsuu23, \cos\beta = -\bunsuu34$である．
+
+  増減表は以下の通りになる．\\（端点$t=0,\pi$は省略）\\
+  \zougenhyou%
+  <Tclm={t,v,x}>%
+  {\alpha,\beta}
+
+  \begin{align*}
+    x_{\mathrm{max}} &= \bunsuu{\sqrt5}3 + 6\times\bunsuu{\sqrt{5}}{3}\times\bunsuu23\\
+    &=\bunsuu{5\sqrt5}{3}
+  \end{align*}
+
+  \begin{align*}
+    x_{\mathrm{min}} &= \bunsuu{\sqrt7}4 + 6\times\bunsuu{\sqrt{7}}{4}\times\bunsuu34\\
+    &=\bunsuu{\sqrt7}{4}\left(1-\bunsuu92\right)\\
+    &=-\bunsuu{7\sqrt7}{8}
+  \end{align*}
+
+  \Ans{$-\bunsuu{7\sqrt7}{8} \leq x \leq \bunsuu{5\sqrt5}{3}$}
+
+  \item \begin{align*}
+    & \dint{0}{\pi} v^2 \,dt\\
+    &=\dint{0}{\pi} (\cos t + 6\cos 2t)^2 \,dt\\
+    &=\dint{0}{\pi} (\cos^2t + 12\cos t\cos2t + 36\cos^22t)\,dt\\
+    &=\dint{0}{\pi} \{\bunsuu{1+\cos 2t}{2} + 12\cos t(1-2\sin^2t) + 36 \bunsuu{1 + \cos 4t}{2}\}\, dt\\
+    &=\dint{0}{\pi} \left(
+      \bunsuu{37}{2} + 12\cos t + \bunsuu{\cos 2t}{2} + 18\cos 4t - 24\cos t \sin t
+    \right)\, dt\\
+    &=\teisekibun{\bunsuu{37}{2}t - 8\sin^3t}{0}{\pi}\\
+    &=\bunsuu{37}{2}\pi
+  \end{align*}
+
+  \Ans{$\bunsuu{37}{2}\pi$}
+\end{enumerate}

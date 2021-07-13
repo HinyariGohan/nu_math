@@ -1,0 +1,36 @@
+\begin{problem}
+  　次の不等式を満たす点$(x, \, y)$が存在する範囲を図示せよ．
+\[ 1<||x|-2|+||y|-2|<5 \]
+\end{problem}
+
+$1 < \zettaiti{\zettaiti{x}-2} + \zettaiti{\zettaiti{y} -2} < 5$について考える．$\zettaiti{x}, \zettaiti{y}$はともに偶関数のため，第1象限について考え，それを線対称に第2，3，4象限に対応させればよい．したがって，下図のようになる．
+
+\begin{center}
+  \begin{pszahyou}[ul=7mm](-8,8)(-8,8)
+    \zahyouMemori[g]
+    \tenretu*<dousa={P*<border>}>{%
+    A(0,5);B(2,7);C(7,2);D(5,0);E(7,-2);
+    F(2,-7);G(0,-5);H(-2,-7);I(-7,-2);J(-5,0);
+    K(-7,2);L(-2,7);
+    }
+    \tenretu*{%
+      aa(2,3);ab(3,2);ac(2,1);ad(1,2);
+    }
+    \tenretu*{%
+      ba(2,-1);bb(3,-2);bc(2,-3);bd(1,-2);
+    }
+    \tenretu*{%
+      ca(-2,-1);cb(-1,-2);cc(-2,-3);cd(-3,-2);
+    }
+    \tenretu*{%
+      da(-2,3);db(-1,2);dc(-2,1);dd(-3,2)
+    }
+    \Nuritubusi<border,nuriiro=white>{\aa\ab\ac\ad}
+    \Nuritubusi<border,nuriiro=white>
+    {\ba\bb\bc\bd}
+    \Nuritubusi<border,nuriiro=white>
+    {\ca\cb\cc\cd}
+    \Nuritubusi<border,nuriiro=white>
+    {\da\db\dc\dd}
+  \end{pszahyou}
+\end{center}

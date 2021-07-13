@@ -1,0 +1,61 @@
+\begin{problem}
+  　正方形ABCDとその内部の1点Pがある。
+線分AP，BP，CPの長さがそれぞれ7，5，1であるとき，
+この正方形の面積を求めよ。
+\end{problem}
+
+\begin{mawarikomi}{}{%
+\begin{zahyou*}[ul=8mm](-0.5,7)(-0.5,7)
+  % 正方形点列定義，線分描画
+  \tenretu{A(0,4*sqrt(2))nw;B(0,0)sw;C(4*sqrt(2),0)se;D(4*sqrt(2),4*sqrt(2))ne}
+  \Takakkei{\A\B\C\D}
+  % 円の交点
+  \CandC\A{7}\B{5}\F\P
+  % 線分描画
+  \Drawline{\P\A}
+  \Drawline{\B\P}
+  \Drawline{\C\P}
+  % 辺弧に大きさを描画
+  \HenKo\A\P{$7$}
+  \HenKo\P\B{$5$}
+  \HenKo<henkoH=0.5zw,henkosep=0.25pt>\P\C{$1$}
+  % 点Pにラベル，黒丸
+  \tenretu**{P[ne]}
+  \Kuromaru<size=2pt>\P
+  % PからADへの垂線
+  \Suisen\P\A\D\Q
+  \HenKo\Q\A{$p$}
+  \HenKo\D\Q{$q$}
+  \Hasen{\P\Q}
+  % PからCDへの垂線
+  \Suisen\P\C\D\R
+  \HenKo\R\D{$a$}
+  \HenKo\C\R{$b$}
+  \Hasen{\P\R}
+  % PD
+  \Drawline{\P\D}
+  \HenKo<henkoH=0.4zw,henkosep=0.25pt,putpos=.4>\P\D{$x$}
+\end{zahyou*}
+}
+
+$\mathrm{PD} = x$とする．正方形内に存在する直角三角形に対し，三平方の定理より，
+$\begin{emcases}
+  a^2 + q^2 = x^2\\
+  a^2 + p^2 = 49 \\
+  b^2 + q^2 = 1 \\
+  b^2 + p^2 = 25
+\end{emcases}\houteisiki{\label{196321}}$
+が成り立つ．
+
+\eqref{196321} について，各式より，
+$\begin{emcases}
+  p^2 - q^2 = 49-x^2\\
+  p^2 - q^2 = 24
+\end{emcases}$
+を得る．よって，これを解いて，$x=5$を得る．
+
+また，$\sankaku{ABP}\godo\sankaku{ADP}$であるから，$\kaku{BAP} = \kaku{DAP} = \bunsuu\pi4$となる．よって，点Pは対角線上に存在し，対角線の長さが8となるから，求める正方形の面積を$S$とすると，
+\[S = 8 \times 8 = 64\]
+\hfill$\Y S=64$
+
+\end{mawarikomi}

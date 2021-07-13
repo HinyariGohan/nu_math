@@ -1,0 +1,35 @@
+\begin{problem}
+　$y>x^2$，かつ$y<x+1$のとき，$x+y$はどんな範囲の値をとるか。
+\end{problem}
+
+\begin{center}
+  \begin{pszahyou}[ul=10mm](-2,2)(-0.5,4)
+  \teigiretu{Fx=X*X;Gx=X+1}
+  \YGraph<migiM=[se]{$y=x^2$}>{\Fx}
+  \YGraph<hidariM=[w]{$y=x+1$}>{\Gx}
+  \YandY<infx=-1,supx=0,xval=xi>\Fx\Gx\P
+  \YandY<infx=1,supx=2,xval=xii>\Fx\Gx\P
+  \YPaintii*<minx=\xi,maxx=\xii,slashangle=-45>\Fx\Gx
+\end{pszahyou}
+
+（斜線部を除く）
+\end{center}
+
+
+\vspace{1zw}
+
+$x+y = k$とおく．このとき，$y = -x + k$であり，
+$k$の値を変化させ，領域内部での最大，最小を考える．
+
+$y = x^2$と$y = x+1$の交点を求める．
+
+\begin{align*}
+  x^2 - x - 1 &= 0\\
+  x &= \bunsuu{1 \pm \sqrt5}{2}
+\end{align*}
+であるから，$(x+y)_{\mathrm{max}} = 2+\sqrt5$
+
+$y' = 2x$より，接するときを考えて，$y = -x - \bunsuu14$であるから，
+$(x+y)_{\mathrm{min}} = -\bunsuu14$
+
+$\Y -\bunsuu14 < x + y < 2 + \sqrt5$

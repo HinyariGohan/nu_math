@@ -1,0 +1,38 @@
+\begin{problem}
+　$f(x)$，$g(x)$を$x\geqq0$で定義された正の値をとる連続関数で，$g(x)$は増加関数であるとする．
+このとき
+\[ S(x)=\int_0^xf(t)dt, \hspace{1zw} T(x)=\int_0^xf(t)g(t)dt \]
+に対して次の(1)，(2)を証明せよ．
+\begin{enumerate}
+\item すべての$x>0$に対して$T(x) \leqq g(x)S(x)$である．
+\item $\displaystyle\frac{T(x)}{S(x)}$は$x>0$で増加関数である．
+ここで一般に関数$h(x)$が増加関数であるとは，
+$x_1<x_2$ならば$h(x_1) \leqq h(x_2)$が成立することをいう．
+\end{enumerate}
+\end{problem}
+
+\noindent\kaie
+\begin{enumerate}
+  \item $f(x) = g(x)S(x)-T(x)$とする．
+  \begin{align*}
+    f(x) &= g(x)S(x) - T(x) \\
+    f(x) &= g(x)\dint{0}{x}f(t)\,dt - \dint{0}{x}g(t)f(t)\,dt\\
+    f'(x) &= g'(x)\dint{0}{x}f(t)\,dt + g(x)f(x) - g(x)f(x)\\
+    &= g'(x)\dint{0}{x}f(t)\,dt
+  \end{align*}
+  ここで，$g(x)$は増加関数より，$g'(x) > 0$であり，$f(x)$は正の値を取るから，
+  $\dint{0}{x}f(t)\,dt > 0$である．したがって，$f'(x) =g'(x)\intd{0}{x}{f}{t} > 0$
+  % 増減表省略
+
+  よって，$x>0$において，$g(x)S(x) - T(x) \geq 0$であるから，$g(x)S(x) \geq T(x)$が示された．
+
+  \item
+  \begin{align*}
+    \bunsuu{T(x)}{S(x)}\,dx &= \bunsuu{T'(x)S(x) - T(x)S'(x)}{S^2(x)} \\
+    &= \bunsuu{f(x)g(x)\intd{0}{x}{f}{t} - f(x)\dint{0}{x}f(t)g(t)\,dt}{S^2(x)}\\
+    &= \bunsuu{f(x)g(x)\intd{0}{x}{f}{t} - \dint{0}{x}f(t)g(t)\,dt}{S^2(x)} \\
+    &= \bunsuu{f(x)\{g(x)S(x)-T(x)\}}{S^2(x)}
+  \end{align*}
+
+  $f(x) > 0$かつ(1)から，$g(x)S(x)-T(x) \geq 0$より，$\bunsuu{T(x)}{S(x)}\,dx \geq 0$であるから，$\bunsuu{T(x)}{S(x)}$は増加関数となる．\qed
+\end{enumerate}

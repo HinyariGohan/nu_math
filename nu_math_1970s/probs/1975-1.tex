@@ -1,0 +1,43 @@
+\begin{problem}
+  　次のおのおのを証明せよ．
+\begin{enumerate}
+\item  $\log_2 3$と$\log_3 4$の大小を比較せよ．
+\item $\displaystyle\cos\frac{2}{9}\pi+\cos\frac{4}{9}\pi+\cos\frac{8}{9}\pi+
+\cos\frac{10}{9}\pi+\cos\frac{14}{9}\pi+\cos\frac{16}{9}\pi$の値を求めよ．
+\end{enumerate}
+\end{problem}
+
+\begin{enumerate}
+  \item $2^{\frac23} = 2\sqrt2 < 3$より，$\log_23 > \bunsuu32 \houteisiki{\label{197511}}$\\ となる．
+  また，$3^{\frac23} = 3\sqrt3 > 4$より，$\log_34 < \bunsuu32 \houteisiki{\label{197512}}$\\となる．
+
+  \eqref{197511},\eqref{197512}より，$\log_34 < \log_23$．
+  \hfill
+  (証明終了)
+
+  \item
+  $\cos5\theta = \cos4\theta$を満たす$\theta$を考える．
+  $-1 < \cos\theta < 1$の範囲において，$0 < \theta < \pi$である．
+
+  $5\theta = \pm 4\theta\pm 2n\pi$より，$ \theta = \frac29n\pi,\ 2n\pi$であり，
+  $\cos5\theta = 16\cos^5\theta - 20\cos^3\theta + 5\cos\theta$，
+  $\cos4\theta = 8\cos^4\theta - 8\cos^2\theta + 1$から，
+  \begin{align*}
+    16\cos^5\theta - 20\cos^3\theta + 5\cos\theta = 8\cos^4\theta - 8\cos^2\theta + 1　\\
+    16\cos^5\theta - 8\cos^4\theta -20\cos^3\theta + 8\cos^2\theta + 5\cos\theta -1 = 0 \\
+    (\cos\theta -1)(16\cos^4\theta + 8\cos^3\theta-12\cos^2\theta-4\cos\theta +1) = 0
+  \end{align*}
+  ここで，解と係数の関係より，
+  \begin{align*}
+    \cos\frac29\pi + \cos\frac49\pi + \cos\frac69\pi +\cos\frac89\pi &= -\frac12\\
+    \cos\frac29\pi + \cos\frac49\pi +\cos\frac89\pi &= 0
+  \end{align*}
+  が成り立ち，また，
+  \begin{align*}
+    &\dumyeq\cos\frac29\pi + \cos\frac49\pi +\cos\frac89\pi + \cos\frac{10}{9}\pi + \cos\frac{14}{9}\pi + \cos\frac{16}9\pi\\
+    &=2\left(\cos\frac29\pi + \cos\frac49\pi +\cos\frac89\pi\right) \\
+    &= 0
+  \end{align*}
+
+  \Ans{$\cos\frac29\pi + \cos\frac49\pi +\cos\frac89\pi + \cos\frac{10}{9}\pi + \cos\frac{14}{9}\pi + \cos\frac{16}9\pi = 0$}
+\end{enumerate}

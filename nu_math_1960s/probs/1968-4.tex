@@ -1,0 +1,24 @@
+\begin{problem}
+4辺形$ABCD$が半径$r$の円に内接し，
+$\displaystyle\frac{AB}{4}=\frac{BC}{3}=\frac{CD}{2}=\frac{DA}{1}$を満たすとき，
+辺$AB$の長さを求めよ．
+\end{problem}
+
+$\bunsuu{\mathrm{AB}}{4} = \bunsuu{\mathrm{BC}}{3} = \bunsuu{\mathrm{CD}}{2} = \bunsuu{\mathrm{DA}}{1} = k$とおくと，$\mathrm{AB} = 4k, \mathrm{BC} = 3k, \mathrm{CD} = 2k, \mathrm{DA} = k$である．
+
+このとき，余弦定理より，
+\begin{align}
+    (2r)^2 &= k^2 + (2k)^2 - 2 \cdot 2k \cdot k \cdot \cos\theta \label{196841}\\
+    (2r)^2 &= (3k)^2 + (4k)^2 - 2 \cdot 3k \cdot 4k \cdot (-\cos\theta) \label{196842}
+\end{align}
+である．
+
+\eqref{196841},\eqref{196842}より，
+\begin{align*}
+    -\left(\bunsuu{25k^2 - 4r^2}{24k^2}\right) &= \bunsuu{3k^2-4r^2}{4k^2}\\
+    4r^2 - 25k^2 &= 18k^2 - 24 r^2\\
+    k &= \sqrt{\bunsuu{28}{43}}r\\
+    &= 2\sqrt{\bunsuu{7}{43}}r
+\end{align*}
+
+$\yueni\quad\mathrm{AB} = 4k = 8\sqrt{\bunsuu{7}{43}}r$

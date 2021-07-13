@@ -1,0 +1,42 @@
+\begin{problem}
+  　$p$，$q$は区間$a \leqq x \leqq b$ $(0<a<b)$で$px+q\geqq\log x$を満たすものとする．
+このとき，定積分
+\[ I=\int_a^b(px+q-\log x)dx \]
+が最小となるような$p$および$q$を求めよ．
+また，そのときの$I$の値を求めよ．
+\end{problem}
+
+\noindent\kaie
+
+$I$が最小値となるのは，$y = px + q$が$y = \log x$と$x=t\ (a<t<b)$で接するときであるので，
+
+\begin{align*}
+  px+q &= \bunsuu1{t}(x-t) + \log t\\
+  &= \bunsuu1{t}x + \log t - 1 \\
+  &\yueni\quad p = \frac1{t},\ q = \log t -1
+\end{align*}
+
+このとき，
+\begin{align*}
+  I &= \dint{a}{b}\left(\bunsuu{1}{t}x + \log t - 1 - \log x\right)\,dx \\
+  &= \teisekibun{\bunsuu{1}{2t}x^2 + (\log t - 1)x - x\log x + x}{a}{b} \\
+  &= \left\{\bunsuu{1}{2t}b^2 + (\log t -1)b - b\log b + b\right\}
+  -\left\{\bunsuu{1}{2t}a^2 + (\log t - 1)a - a\log a + a\right\} \\
+  &= \bunsuu{1}{2t}(b^2-a^2) + \log t(b-a) - b\log b + a\log a\\
+\end{align*}
+
+ここで，$I$が最小となる$t$は，
+\begin{align*}
+  \bunsuu{dI}{dt} &= -\bunsuu{1}{2t^2}(b^2-a^2) + \bunsuu{1}{t}(b-a) \\
+  &= -\bunsuu{1}{2t^2}\left\{(b^2-a^2) - 2t(b-a)\right\} \\
+  &= -\bunsuu{1}{2t^2}(b-a)(b+a-2t)
+\end{align*}
+であるから，
+\begin{align*}
+  t < \frac{a+b}{2} のとき \qquad&\frac{dI}{dt} < 0\\
+  t > \frac{a+b}{2} のとき \qquad&\frac{dI}{dt} > 0
+\end{align*}
+より，$t = \frac{a+b}{2}$のとき，$I$は最小となる．
+したがって，$p = \frac{2}{a+b},\ q = \log \left(\frac{a+b}{2}\right) + 1$
+
+\Ans{$I = (a+b)(b^2-a^2)+(b-a)\log\left(\frac{a+b}{2}\right)-b\log b+a\log a$}

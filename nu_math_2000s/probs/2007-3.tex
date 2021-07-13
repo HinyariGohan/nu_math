@@ -1,0 +1,27 @@
+\begin{problem}
+数列{$a_n$}($a_n > 0$)を次の規則によって定める:
+\[a_1 = 1 , \quad \int^{a_{n+1}}_{a_n}\bunsuu{dx}{\sqrt[3]{x}} = 1 \, (n =1,2,3,\cdots).\]
+曲線$y=\bunsuu{1}{\sqrt[3]{x}}$と,$x$軸および2直線$x=a_n,x=a_{n+1}$で囲まれた図形を$x$の周りに1回転させた回転体の体積を$V_n$とする.このとき,$\lim_{n \to \infty}\sqrt{n}V_n$を求めよ.
+\end{problem}
+
+\noindent\kaie \;%なんか分母デカくてキモい%
+$n \geq 2$ に対して,
+\begin{align*}
+  \dint{a_n}{a_{n+1}}\frac{dx}{\sqrt[3]{x}} &= \teisekibun{\frac32x^{\frac{2}{3}}}{a_n}{a_{n+1}}\\
+  &= \frac32\left({a_{n+1}}^{\frac{2}{3}}-{a_n}^{\frac{2}{3}}\right) = 1\\
+{a_{n+1}}^{\frac{2}{3}}-{a_n}^{\frac{2}{3}} &= \frac23\\
+{a_n}^{\frac{2}{3}} &= \frac23(n-1)+1\\
+\therefore \, a_n &= \left(\frac23n+\frac13\right)^{\frac{3}{2}} \, (a_1 = 1より,n = 1 でも成立.)\\
+\end{align*}
+
+\begin{align*}
+V_n &= \pi \displaystyle\int^{a_{n+1}}_{a_n}x^{(-\frac{2}{3})}dx\\
+    &= \pi \left[3x^{\frac{1}{3}}\right]^{a_{n+1}}_{a_n}\\
+    &= 3\pi\left(\frac23n+1\right)^{\frac{1}{2}}-\left(\frac23n+\frac13\right)^{\frac{1}{2}}\\
+\sqrt{n}V_n &= 3\pi \frac{\frac23 \sqrt{n}}{\sqrt{\frac23n+1}+\sqrt{\frac23n+\frac13}}\\
+  &= \frac{2\pi}{\sqrt{\frac23n+\frac{1}{n}}+\sqrt{\frac23n+\frac{1}{3n}}}\\
+\lim_{n \to \infty}\sqrt{n}V_n &= \lim_{n \to \infty}\frac{2\pi}{\sqrt{\frac23n+\frac{1}{n}}+\sqrt{\frac23n+\frac{1}{3n}}}\\
+&= \frac{2\pi}{2\sqrt{\frac23}}\\
+&= \frac{\sqrt{6}}{2}\pi
+\end{align*}
+\Ans{$\frac{\sqrt{6}}{2}\pi$}

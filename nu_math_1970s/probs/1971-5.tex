@@ -1,0 +1,62 @@
+\begin{problem}
+\DaimonBox{a}
+  \begin{enumerate}
+\item $\displaystyle y=\frac{\log x}{x^3}$ $(x>0)$の増減を調べ，
+グラフの概形をかけ．
+\item $\displaystyle\int_1^t\frac{\log x}{x^3}dx$を求め，
+$t\to+\infty$のときの極限値を求めよ．
+\end{enumerate}
+
+\DaimonBox{b}
+　数字0を記した札が$n$枚，数字$1, \, 2, \, \cdots\cdots, \, 9$を記した札がそれぞれ$m$枚ある．
+この中から任意に1枚を取り出し，その札の数字だけの賞金を受ける．
+ただし数字0の札を引いたときは，その札を戻したうえ，
+もう1回だけ引きなおして，賞金を受けるものとする．
+\begin{enumerate}
+\item 賞金の期待値を求めよ．
+\item 期待値を3以下にするには，
+比$\displaystyle\frac{n}{m}$をどの程度に大きくすればよいか．
+\end{enumerate}
+\end{problem}
+
+\DaimonBox{a}
+\begin{enumerate}
+  \item $y = \frac{\log x}{x^3}$より，$x$について微分して，$y' = \frac{1-3\log x}{x^4},\ y'' = \frac{4(3\log x - 2)}{x^5}$である．
+
+  増減表は以下の通りになる．
+  
+
+\end{enumerate}
+
+\DaimonBox{b}
+\begin{enumerate}
+  \item
+  \begin{align*}
+    &\dumyeq\retuwa{k=1}{9} k\,\bunsuu{m}{9m + n} \\
+    &= \bunsuu12 \times 9 \times 10\,\bunsuu{m}{9m + n} \\
+    &= \bunsuu{45m}{9m + n}
+  \end{align*}
+  期待値を$E(X)$とすると，
+  \begin{align*}
+    E(X) &= \bunsuu{45m}{9m + n} + \bunsuu{n}{9m + n} \times
+      \bunsuu{45m}{9m + n} \\
+    &= \bunsuu{45m(9m + 2n)}{(9m + n)^2}
+  \end{align*}
+  \Ans{$E(X) = \bunsuu{45m(9m + 2n)}{(9m + n)^2}$}
+
+  \item $m \neq 0$であるから，$E(X) = \bunsuu{45\left(9 + 2\frac{n}{m}\right)}{\left(9 + \frac{n}{m}\right)^2}$と表すことができる．
+
+  $\bunsuu{n}{m} = t$とし，$f(t) = \bunsuu{45(9 + 2t)}{(9+t)^2}$と定めると，
+  $f(t) \leq 3$から，
+  \begin{align*}
+    f(t) &\leq 3 \\
+    \bunsuu{45(9+2t)}{(9+t)^2} &\leq 3 \\
+    15(9+2t) &\leq (t+9)^2 \\
+    t^2 + 18t + 81 - 135 - 30t &\geq 0\\
+    t^2 - 12t - 54 &\geq 0
+  \end{align*}
+  $t > 0$より，これを解いて，$t \geq 6 + 3\sqrt{10}$であるから，
+  比$\bunsuu{n}{m}$は$6 + 3\sqrt{10}$以上にすればよい．
+
+  \Ans{$6 + 3\sqrt{10}$}
+\end{enumerate}

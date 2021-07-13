@@ -1,0 +1,38 @@
+\begin{problem}
+  　$p\geqq0$，$q\geqq0$，$p \neq q$である$p$，$q$に対して
+\[ |\log(p+1)-\log(q+1)|<|p-q| \]
+が成立することを証明せよ．
+
+次に，$k$を$0<k<1$である定数とすると
+$|\log(p+1)-\log(q+1)|<k|p-q|$が成立しないような
+$p\geqq0$、$q\geqq0$，$p \neq q$が存在することを示せ．
+ここで$\log$は自然対数を表すものとする．
+\end{problem}
+
+
+\noindent\kaie
+
+条件式から$p>q$としても一般性を失わない．ここで，
+$\bunsuu{\log(p+1) - \log(q+1)}{p-q} < 1$を示せばよい．
+
+ここで，平均値の定理から，$f(x) = \log(x+1)$とすると，
+\begin{align}
+\bunsuu{\log(p+1) - \log(q+1)}{p-q} = \bunsuu1{c+1} \label{197441}
+\end{align}
+となる$c$が，$q < c < p$の範囲に存在する．
+
+$\bunsuu{1}{p+1} < \bunsuu1{c+1} < \bunsuu1{q+1} \houteisiki{\label{197442}}$であるから，$\bunsuu1{c+1} < \bunsuu1{q+1} \leq 1$を満たし，$\bunsuu{1}{c+1} < 1$である．
+
+したがって，$\zettaiti{\log(p+1) - \log(q+1)} < \zettaiti{p-q}$となる．
+\qed
+
+また，$0 < k < 1$であることから，$k = \bunsuu1{1+r}\ (r>0)$とおける．
+このとき，$c = \bunsuu1{1+r}$となる$c$が存在することを示せば良い．
+
+$p = r + \alpha, q = r - \alpha$とすると，
+$\frac{1}{r+1+\alpha} < \frac{1}{c+1} < \frac{1}{r+1-\alpha}$
+となる．
+
+ここで，$\dlim{\alpha \to 0}$を考えると，はさみうちの原理から，
+$\bunsuu{1}{c+1} = \bunsuu{1}{r+1} = k$となるため，
+等号が成立するような$p \geq 0, q \geq 0, p \neq q$となる$p,q$が存在することが示された．したがって，題意を満たす$p,q$が存在することが示された．\qed

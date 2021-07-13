@@ -1,0 +1,66 @@
+\begin{problem}
+\begin{enumerate}
+    \item 鋭角三角形$ABC$の垂心を$H$とするとき，
+    3つの三角形$HBC$，$HCA$，$HAB$の外接円の大きさの間には，
+    どのような関係があるか。
+    \item $\log_ac+\log_bc=0$のとき，
+    $abc+1=ab+c$であることを証明せよ。
+    \item $x$が増していくとき，
+    $f(x)=x^3-4x^2+6x-7$も増していくことを証明せよ。
+\end{enumerate}
+\end{problem}
+
+\begin{enumerate}
+    \item $\mathrm{AB} = c, \mathrm{BC} = a, \mathrm{CA} = b$とする．
+    3つの三角形HBC，HCA，HABの外接円の半径をそれぞれ，$R_a,R_b,R_c$とする．
+
+また，\[\kaku{BHC} = \alpha, \kaku{CHA} = \beta,\kaku{AHB} = \gamma\]とすると，
+\[\alpha = 180\degree - A, \beta = 180\degree - B,
+\gamma = 180\degree - C\]であるから，
+\[\sin\alpha = \sin A,\sin\beta = \sin B, \sin\gamma = \sin C\]である．
+
+したがって，\[R_A = \bunsuu{a}{2\sin\alpha}, R_B = \bunsuu{b}{2\sin\beta}, R_C = \bunsuu{c}{2\sin\gamma}\]であって，$\sankaku{ABC}$の外接円の半径を$R$とすると，\[R = \bunsuu{a}{2\sin A} = \bunsuu{b}{2\sin B} = \bunsuu{C}{2\sin C}\]であるので，
+
+\[R = R_A = R_B = R_C\]
+
+である．
+
+したがって，3つの三角形HBC，HCA，HABの外接円の半径はどれも等しい．
+\hfill
+\textgt{(証明終了)}
+
+\vspace{1zw}
+
+\item
+\begin{enumerate}
+    \item $c=1$のとき，$\log_ac=0, \log_bc=0$であり，$\log_ac + \log_bc = 0$かつ，$abc + 1 = ab + c \doti ab + 1 = ab + 1$である．
+
+よって，$c=1$のとき題意は満たされる．
+
+\item $c \neq 1$のとき，真数条件より$c>0$であるから，
+
+$c>1, 1>c>0$のとき，$\log_ac \neq 0$であり，
+
+\begin{align*}
+    \log_ac + \log_bc &=0\\
+    \log_ac + \bunsuu{\log_ac}{\log_ab} &= 0\\
+    1 + \bunsuu{1}{\log_ab} &=0\\
+    \log_a{b} + \log_a{a} &=0
+\end{align*}
+
+したがって，$\log_aab = 0$であるから，$ab = 1$．
+
+$ab = 1$のとき，$abc + 1 = c+1 + ab + c$より，$c\neq1$のとき，題意は満たされる．
+\end{enumerate}
+
+よって，(i),(ii)により題意は示された．
+\hfill
+\textgt{(証明終了)}
+
+\vspace{1zw}
+
+\item $f'(x) = 3x^2 - 8x + 6 = 3\left(x-\bunsuu43 \right)^2 + \bunsuu23 > 0$
+
+$\Y f(x)$は単調増加．
+
+\end{enumerate}
