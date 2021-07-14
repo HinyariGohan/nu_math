@@ -1,0 +1,46 @@
+\begin{problem}
+  　次の数列$a_1, \, a_2, \, \cdots\cdots, \, a_n, \, \cdots\cdots$の収束，発散を調べ，
+解答欄の表に番号を記入せよ．
+またその理由を述べよ．
+\begin{enumerate}
+\item $\displaystyle a_n=\frac{1}{n}\sin n$
+\item $\displaystyle a_n=n^2\sin\frac{1}{n}$
+\item $\displaystyle a_n=n\cos\frac{n\pi}{4}$
+\item $a_n=\sqrt{2n}-n$
+\item $\displaystyle a_n=\frac{1}{n^2}+\frac{1}{{(n+1)}^2}+\cdots\cdots+\frac{1}{{(2n)}^2}$
+\item $\displaystyle a_n=\frac{1}{n}+\frac{1}{n+1}+\cdots\cdots+\frac{1}{2n}$
+\end{enumerate}
+\end{problem}
+
+\noindent\kaie
+\begin{enumerate}
+  \item $-1 \leq \sin\theta \leq 1$より，$-\frac{1}{n} < \frac{\sin n}{n} < \frac{1}{n}$であり，$\dlim{n \to \infty} -\frac{1}{n} = 0$と$\dlim{n \to \infty} \frac{1}{n} = 0$から，はさみうちの原理より，$\lim_{n\to\infty}a_n = 0$である．したがって，$0$に収束する．
+
+  \item
+  $\dlim{n \to \infty}\ n^2 \sin \frac{1}{n}
+    = \dlim{n \to \infty}\ n\left(n\sin \frac{1}{n}\right)
+    = \dlim{n \to \infty}\ n
+    = \infty$
+  より，発散する．
+
+  \item $\dlim{n \to \infty}\ \cos\frac{n}{4}\pi$は振動するから，
+  $\dlim{n\to\infty}\ n\cos\frac{n}{4}\pi$も振動する．
+
+  \item $a_n = \frac{(\sqrt{2n}-n)(\sqrt{2n}+n)}{\sqrt{2n}+n}
+  = \frac{n^2-2n}{n+\sqrt{2n}}=\frac{n-2}{1+\sqrt{\frac{2}{n}}}\underset{\ n \to \infty\ }{\longrightarrow} \infty$より，発散する．
+
+  \item $\frac{1}{(n+k)^2} < \frac{1}{n^2}$より，
+  \[0 < a_n = \frac{1}{n^2} + \frac{1}{(n+1)^2} + \cdots\cdots + \frac{1}{2n^2} < \frac{n}{n^2} = \frac{1}{n}\]
+
+  ここで，$\dlim{n\to\infty}\ \frac{1}{n} = 0$より，はさみうちの原理から，
+  $\dlim{n\to\infty}\ a_n = 0$である．したがって，0に収束する．
+
+  \item
+  \begin{align*}
+    \dlim{n\to\infty}\ a_n &= \retuwa{k=1}{n}\frac{1}{n+k} \\
+    &= \dlim{n\to\infty}\ \frac{1}{n} \retuwa{k=1}{n}\frac{1}{1+\frac{k}{n}}\\
+    &= \dint{0}{1}\frac{1}{1+x}\, dx\\
+    &= \teisekibun{\log (1+x)}{0}{1} = \log 2
+  \end{align*}
+  したがって，$\log 2$に収束する．
+\end{enumerate}
