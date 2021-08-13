@@ -1,0 +1,32 @@
+\begin{problem}
+　$f(z)$は，複素数を係数とする$z$の1次式であって，
+$f(f(f(z)))=z$がつねに成り立つものとする．
+このような$f(z)$をすべて求めよ．
+\end{problem}
+
+\noindent\kaie
+
+\begin{align*}
+  f(z) &= (a+bi)z + c \\
+  f(f(z)) &= (a+bi)\{(a+bi)z + c\} + c \\
+  &= (a^2 - b^2 + 2abi)z + c(a + 1 + bi) \\
+  f(f(f(z))) &= (a+bi)^2\{(a+bi)z + c\} + c\{(a+bi) + 1\} \\
+  &= (a+bi)^3 z + c\{(a+bi)^3 + (a+bi) + 1\}
+\end{align*}
+
+ここで，$f(f(f(z))) = z$から，
+$\trenritu{(a+bi)^3 = 1 \\ c\{(a+bi)^2 + (a+bi) + 1\} = 0}$
+を満たす．よって，$c=0$である．
+
+また，$(a^3+3a^2bi - 3ab^2 - b^2i) = 1$より，
+$\trenritu{b(3a^2-b^2) = 0 \\ a^3 - 3ab^2 = 1}$ であり，
+$\trenritu{b(3a^2-b^2) = 0 \\ a(a^2-3b^2) = 1}$ である．
+よってここで場合分けを行う．
+
+\begin{enumerate}[(i)]
+  \item $b=0$のとき，$a^3 = 1$であり，$a$は実数より$a=1$
+  \item $3a^2 = b^2$のとき，$a(-8a^2) = 1$であり，$a,b$は実数より，
+  $a = -\bunsuu12,\ b=\pm \bunsuu{\sqrt{3}}2$である．
+\end{enumerate}
+
+\Ans{$f(z) = z, \left(-\bunsuu12 \pm \bunsuu{\sqrt3}{2}i\right)z$}

@@ -1,0 +1,41 @@
+\begin{problem}
+次のおのおのについて解答せよ．
+\begin{enumerate}
+\item 4辺形$ABCD$と1点$P$がある．
+\[ \Vec{AP}+\Vec{CP}=\Vec{BP}+\Vec{DP} \]
+が成立するならば，この4辺形はどんな4辺形か．
+\item $x_k\geqq0$ $(k=1, \, 2, \, \cdots\cdots, \, n)$のとき，
+次の不等式を証明せよ．
+\[ \frac{x_1+x_2+\cdots\cdots+x_n}{1+x_1+x_2+\cdots\cdots+x_n} \geqq
+\frac{1}{n}\left( \frac{x_1}{1+x_1}+\frac{x_2}{1+x_2}+\cdots\cdots+\frac{x_n}{1+x_n} \right) \]
+\end{enumerate}
+\end{problem}
+
+\noindent\kaie
+\begin{enumerate}
+  \item $\Vec{AP} + \Vec{CP} = \Vec{BP} + \Vec{DP}$
+
+  $\Vec{AP} + (\Vec{AP} - \Vec{AC}) - (\Vec{AP}- \Vec{AB}) - (\Vec{AP} - \Vec{AD}) = 0$
+
+  $-\Vec{AC} + \Vec{AB} + \Vec{AD} = 0$
+
+  ここで，$\Vec{AB} = \Vec{DC}, \Vec{AD} = \Vec{BC}$であるから，四角形ABCD
+  は平行四辺形となる．
+
+  \item $f(t) = \bunsuu{t}{1+t}$とする。$f'(t) = \bunsuu{1}{(1+t)^2}$となり，増減表は以下のようになる．
+
+  \RESETKEYA
+  \setkeys{zogen}{
+    hensu=t,
+    ranaa=0,ranbb=+,ranca=0,rancb=\nearrow,
+    kansub=f'(t),kansuc=f(t)
+  }
+  \zogen(3,3)
+
+  $f(t)$は$t\leq 0$において，狭義単調増加である．
+  $x_1 + x_2 + \cdots + x_n = t$とすると，
+  $\bunsuu{t}{1+t} \leq \bunsuu{x_k}{1+x_k}\ (k = 1,2,\cdots,h)$であるから，
+  \[\frac{t}{1+t} \leq \frac{1}{n}\retuwa{k=1}{n}\frac{t}{1+t} \leq \frac{1}{n}\retuwa{k=1}{n}\frac{x_k}{1+x_k}\]
+
+  を満たす．よって，題意は示された．\qed
+\end{enumerate}
