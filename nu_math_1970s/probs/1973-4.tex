@@ -1,0 +1,71 @@
+\begin{problem}
+$a$が1でない実数のとき，方程式$x^2+ax=\sin x$は
+ちょうど2つの実根をもつことを証明せよ．
+\end{problem}
+
+
+
+$x^2+ax-\sin x=0$より，$f(x) = x^2 + ax - \sin x$とする．
+$f'(x) = 2x + a - \cos x$，$f''(x) = 2 + \sin x$である．
+
+\begin{enumerate}[(i)]
+  \item $a>1$のとき
+  \begin{multicols}{2}
+    \RESETKEYA
+    \setkeys{zogen}{
+      hensu=x,
+      ranab=\alpha,ranad=0,
+      ranbb=+,ranbe=+,
+      ranca=\searrow,rancb=0,rancc=\nearrow,rancd=a-1,rance=\nearrow,
+      kansub=f''(x),kansuc=f'(x)
+    }
+    \zogen(3,5)
+    \RESETKEYA
+    \setkeys{zogen}{
+      hensu=x,
+      ranab=\alpha,ranad=0,
+      ranba=-,ranbb=0,ranbc=+,ranbe=+,
+      ranca=\searrow,rancc=\nearrow,rancd=0,rance=\nearrow
+    }
+    \zogen(3,5)
+  \end{multicols}
+
+  \item $a=1$のとき
+  \begin{multicols}{2}
+    \RESETKEYA
+    \setkeys{zogen}{
+      hensu=x,
+      ranab=0,ranba=+,ranbc=+,ranca=-,rancb=0,rancc=+,
+      kansub=f''(x),kansuc=f'(x)
+    }
+    \zogen(3,3)
+    \RESETKEYA
+    \setkeys{zogen}{
+      hensu=x,
+      ranab=0,ranba=-,ranbb=0,ranbc=+,ranca=\searrow,rancb=0,rancc=\nearrow,
+    }
+    \zogen(3,3)
+  \end{multicols}
+
+  \item $a<1$のとき
+  \begin{multicols}{2}
+    \RESETKEYA
+    \setkeys{zogen}{
+      hensu=x,
+      ranab=0,ranad=\alpha,
+      ranca=-,rancb=a-1,rancc=-,rancd=0,rance=+,
+      kansub=f''(x),kansuc=f'(x)
+    }
+    \zogen(3,5)
+    \RESETKEYA
+    \setkeys{zogen}{
+      hensu=x,
+      ranab=0,
+      ranba=-,ranbc=-,ranbd=0,ranbe=+,
+      ranca=\searrow,rancb=0,rancc=\searrow,rance=\nearrow
+    }
+    \zogen(3,5)
+  \end{multicols}
+\end{enumerate}
+
+ここで，任意の$a$に対して，$\dlim{x \to \infty}f(x) = \infty, \dlim{x \to -\infty}f(x) = \infty$ となるから，中間値の定理と(i),(ii),(iii)より，$a\neq 1$のとき，$x^2+ax=\sin x$はちょうど2つの実根を持つ．\qed

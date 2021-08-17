@@ -1,0 +1,26 @@
+\begin{problem}
+$n$は2以上の自然数で，$0 \leqq x \leqq 1$のとき，
+$\displaystyle\sum_{k=0}^nx^k \leqq n+x^{n+1}$を証明せよ．
+\end{problem}
+
+\begin{enumerate}[(i)]
+  \item $n=2$のとき
+  \begin{align*}
+    &\dumyeq x^3 + 2 - (x^2+x+1)\\
+    &= x^3 -x^2-x+1\\
+    &= x^2(x-1)-(x-1)\\
+    &= (x+1)(x-1)^2 \qquad\geq 0
+  \end{align*}
+  より，成立．
+  \item $n=2,3,\cdots, n$のとき，
+  \[\retuwa{k=0}{l}x^k \leq l + x^{l+1}\]
+  が成立すると仮定する．
+
+  $n = l+1$のとき，
+  \[\retuwa{k=0}{l+1}x^k \leq (l+1)+x^{l+2}\]
+  が成立することを示せばよい．
+
+  $\retuwa{k=0}{l+1}x^k \leq l + x^{l+1}+x^{l+2}$ であり，$0 \leq x \leq 1$より，$0 \leq x^{l+1} \leq 1$であるから，$l + x^{l+1} + x^{l+2} \leq (l+1) + x^{l+2}$が成立する．
+\end{enumerate}
+
+(i),(ii)から，すべての自然数$n$について，$\displaystyle\sum_{k=0}^nx^k \leqq n+x^{n+1}$が成立する．\qed

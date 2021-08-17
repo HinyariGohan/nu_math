@@ -1,0 +1,33 @@
+\begin{problem}
+  　すべての複素数$z$に対して
+${|z|}^2+az+\overline{a}\,\overline{z}+1\geqq0$となる複素数$a$の集合を求め，
+これを複素平面上に図示せよ．
+ただし$\overline{a}$，$\overline{z}$はそれぞれ$a$，$z$の共役複素数を表す．
+\end{problem}
+
+$\zettaiti{z}^2 + az + \conj{a}\conj{z} + 1 \leq 0$ より，
+$z\cdot \conj{z} + az + \conj{a}\conj{z} + 1 \leq 0$
+
+ここで，$z = \alpha + \beta i, a = \gamma + \delta i$とする．
+\begin{align*}
+  \alpha^2 + \beta^2 + (\gamma + \delta i)(\alpha + \beta i) + (\gamma - \delta i)(\alpha - \beta i) + 1 &\leq 0 \\
+  (\alpha^2 + \beta^2) + (\alpha\gamma-\beta\delta) + (\gamma-\delta i)(\alpha - \beta i) + 1 &\leq 0 \\
+  (\alpha^2 + \beta^2) + (\alpha\gamma-\beta\delta) + (\alpha\delta + \beta\gamma)i + (\alpha\gamma - \delta\beta) - (\alpha\delta + \beta\gamma)i + 1 &\leq 0 \\
+  \alpha^2 + \beta^2 + 2(\alpha\gamma - \beta\delta) + 1 &\leq 0
+\end{align*}
+
+この不等式は，任意の$\alpha,\beta$に対して成立するから，
+\begin{align*}
+  (\alpha + \gamma)^2 - \gamma^2 + (\beta - \delta)^2 - \delta^2 + 1 &\leq 0 \\
+  (\alpha + \gamma)^2 + (\beta-\delta)^2 + 1 -\gamma^2 - \delta^2 &\leq 0
+\end{align*}
+より，$\gamma^2 + \delta^2 \geq 1$のとき，
+任意の$\alpha, \beta$に対してこの不等式は成立する．
+
+よって，$x^2 + y^2 \leq 1$の部分（下図参照，境界を含む）
+\begin{center}
+  \begin{pszahyou}[ul=20mm](-1.5,1.5)(-1.5,1.5)
+    \En**<border>\O{1}
+  \end{pszahyou}
+\end{center}
+である．

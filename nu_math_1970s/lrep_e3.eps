@@ -1,0 +1,77 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%%Creator: emathPs 2.09 tDB (CQB00260@nifty.ne.jp)
+%%BoundingBox: 0 0 86 120
+%%HiResBoundingBox: 0 0 85.35815 119.50142
+/emathsave save def
+ 0 0 0 setrgbcolor
+0.099626401 0.099626401 scale
+/arrowdict 16 dict def
+arrowdict begin
+/mtrx matrix def
+end
+/arrow
+ { arrowdict begin
+ /hekomi exch def
+ /headlength exch def
+ /halfheadthickness exch 2 div def
+ /halfthickness exch 2 div def
+ /tipy exch def /tipx exch def
+ /taily exch def /tailx exch def
+ /dx tipx tailx sub def
+ /dy tipy taily sub def
+ /arrowlength dx dx mul dy dy mul add sqrt def
+ /angle dy dx atan def
+ /base arrowlength headlength sub def
+ /hekomibase base hekomi add def
+ /savematrix mtrx currentmatrix def
+ tailx taily translate
+ angle rotate
+ 0 halfthickness neg moveto
+ hekomibase halfthickness neg lineto
+ base halfheadthickness neg lineto
+ arrowlength 0 lineto
+ base halfheadthickness lineto
+ hekomibase halfthickness lineto
+ 0 halfthickness lineto
+ closepath
+ savematrix setmatrix
+end
+} def
+/ellipsedict 8 dict def
+ellipsedict /mtrx matrix put
+/ellipse
+{ ellipsedict begin
+ /endangle exch def
+ /startangle exch def
+ /yrad exch def
+ /xrad exch def
+ /y exch def
+ /x exch def
+ /savematrix mtrx currentmatrix def
+ x y translate
+ xrad yrad scale
+ 0 0 1 startangle endangle arc
+ savematrix setmatrix
+ end
+} def
+10 setlinewidth
+[] 0 setdash
+0 setlinecap
+0 setlinejoin
+gsave
+gsave
+newpath 56.90536 56.90536 moveto
+625.95978 56.90536 lineto
+341.44653 1118.87222 lineto
+closepath
+closepath  stroke
+grestore
+grestore
+gsave
+newpath 341.44653 1118.87222 moveto
+341.44653 56.90536 lineto
+stroke
+grestore
+showpage
+emathsave restore
+%%EOF

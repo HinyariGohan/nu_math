@@ -1,0 +1,27 @@
+\begin{problem}
+  次の(1)，(2)を証明せよ．
+\begin{description}
+\item[(1)]$\sin x$は，$x$の整式としては表わせない．
+\item[(2)]$f(x)$は実数全体を定義域とする微分できる関数で，$f(1)=0$である．このとき
+\[ g(x)=\begin{cases} \displaystyle \frac{f(x)}{x-1} \hspace{1zw} (x\neq1\text{のとき}) \\
+f'(1) \hspace{1zw} (x=1\text{のとき}) \end{cases} \]
+とおけば，$g(x)$は連続関数である．
+\end{description}
+\end{problem}
+
+\begin{enumerate}
+  \item $\sin x = \retuwa{k=0}{n}a_kx^k$と仮定する．($a_k$は任意の実数)
+
+  このとき，$(\sin x)^4 = \sin x$であるので，$(\sin x)^{(4l)}=\sin x$\ ($l$は整数)となる．ここで，$4l > n$となる$l$を考えると，$(\sin x)^{(4l)} = \sin x  = 0$となるため，これは矛盾である．したがって，$\sin x$は$x$の整式で表すことは出来ない．
+
+  \item 平均値の定理から，
+  \[\frac{f(x) - f(1)}{x-1} = f'(c)\]
+  を満たす$c$が存在する位置について，場合分けを行う．
+  \begin{enumerate}[(i)]
+    \item $x>1$のとき，$1 < c < x$の位置に存在する．
+    したがって，$\dlim{x \to 1}\frac{f(x)-f(1)}{x-1} = f'(c)$となる．
+    \item $x<1$のとき，$x < c < 1$の位置に存在する．
+    したがって，$\dlim{x \to 1}\frac{f(x)-f(1)}{x-1} = f'(c)$となる．
+  \end{enumerate}
+  よって，(i),(ii)から，$\dlim{x \to 1}\frac{f(x)-f(1)}{x-1} = f'(c)$となるから，$g(x)$は連続関数である．
+\end{enumerate}
