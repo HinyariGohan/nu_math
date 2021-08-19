@@ -1,0 +1,50 @@
+\begin{problem}
+曲線$y=x^2(x+1)$と直線$y=k^2(x+1)$ $(0 \leqq k \leqq 1)$とで囲まれる部分の面積が最小となるように$k$の値を定めよ．
+\end{problem}
+
+$y = x^2(x+1)$と$y=k^2(x+1)$の交点を求める．
+\begin{align*}
+  k^2(x+1) &= x^2(x+1) \\
+  (x^2-k^2)(x+1) &= 0 \\
+  (x-k)(x+k)(x+1) &= 0
+\end{align*}
+より，$x= k, -k, -1$である．$0 \leq k \leq 1$より，$-1 < -k < k$である．
+
+\begin{align*}
+  S(k) &= \dint{-k}{k}\{k^2(x+1)-x^2(x+1)\}\,dx + \dint{-1}{-k}\{x^2(x+1)-k^2(x+1)\}\,dx \\
+  &= \dint{-k}{k}(k^2-x^2)\,dx + \dint{-1}{-k}\{x^2(x+1)-k^2(x+1)\}\,dx \\
+  &= \teisekibun{k^2x-\bunsuu13x^3}{-k}{k} + \teisekibun{\frac14x^4+\frac13x^3-\frac12k^2x-k^2x}{-1}{-k} \\
+  &= \frac43k^3 +
+  \left\{\left(\frac14k^4-\frac13k^3-\frac12k^3+k^3\right) - \left(\frac14-\frac13-\frac12k^2+k^2\right)\right\} \\
+  &= \frac43k^3+\frac14k^4+\frac16k^3-\frac12k^2+\frac1{12} \\
+  &= \frac14k^4+\frac32k^3-\frac12k^2+\frac1{12}
+\end{align*}
+
+\begin{mawarikomi}{}{%
+\begin{pszahyou}[ul=25mm](-1.5,1)(-1,1)
+  \def\Fx{X*X*(X+1)}
+  \def\Gx{0.25*(X+1)}
+  \YGraph\Fx
+  \YGraph\Gx
+  \YPaintii<minx=-1,maxx=0.5>\Fx\Gx
+\end{pszahyou}
+}
+したがって，
+\begin{align*}
+  S'(k) &= k^3+\frac92k^2-k \\
+  &= k\left(k^2+\frac92k-1\right)
+\end{align*}
+\RESETKEYA
+\setkeys{zogen}{
+  hensu=k,
+  ranaa=0,ranac=\frac{-9+\sqrt{85}}{4},ranad=1,
+  ranbb=-,ranbc=0,ranbd=+,
+  rancb=\searrow,rancd=\nearrow,
+  kansub=S'(k),kansuc=S(k)
+}
+\zogen(3,5)
+
+増減表より，$S(k)$を最小とする$k$は$k = \frac{-9+\sqrt{85}}{4}$である．
+\end{mawarikomi}
+
+\Ans{$k=\frac{-9+\sqrt{85}}{4}$}

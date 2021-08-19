@@ -1,0 +1,35 @@
+\begin{problem}
+関数$f(x)$ $(a \leqq x \leqq b)$が正の第2次導関数をもつとき，
+曲線$y=f(x)$の上に点$P$をとって，
+$P$における接線とこの曲線および2直線$x=a$，$x=b$とで囲まれた部分の面積を最小にするには，
+点$P$をどのようにとればよいか．
+\end{problem}
+
+$f''(x) > 0$である．Pにおける接線は，
+\begin{align*}
+  y &= f'(p) (x-p) + f(p) \\
+  &= \dint{a}{b}\zettaiti{f(x) - f'(p)(x-p) + f(p)}\,dx
+\end{align*}
+ここで，$f(x)$の部分は，pによらない定数となるから，
+\[S(p) = \dint{a}{b}f'(p)(x-p)+f(p)\,dx\]
+が最大となる$p$を求めればよい．
+\begin{align*}
+  S(p) &=
+  \teisekibun{\bunsuu12 f'(p)x^2 + (f(p)-f'(p))\cdot p}{a}{b}\\
+  \bunsuu12 f'(p)(b^2-a^2) + (f(p)-f'(p)\cdot p)(b-a)\\
+  S'(p) &= \bunsuu12 f''(p)(b^2-a^2)+(f'(p)-f'(p)-f''(p)\cdot p)(b-a) \\
+  &= \bunsuu12 f''(p) (b-a)\{(b+a)-2p\}
+\end{align*}
+ここで，$f''(p) > 0, (b-a) \geq 0$より，
+\RESETKEYA
+\setkeys{zogen}{
+  hensu=p,
+  ranaa=a,ranac=\frac{a+b}{2},ranae=b,
+  ranbb=+,ranbc=0,ranbd=-,
+  rancb=\nearrow,rancd=\searrow,
+  kansub=S'(p),kansuc=S(p)
+}
+\zogen(3,5)
+
+増減表より，$S(p)_{\mathrm{Max}}$となるのは，$p = \frac{a+b}{2}$のときである．\\したがって，求める点Pは$(x,y) =\left(\bunsuu{a+b}{2},f\left(\bunsuu{a+b}{2}\right)\right)$
+\Ans{P$\left(\bunsuu{a+b}{2},f\left(\bunsuu{a+b}{2}\right)\right)$}

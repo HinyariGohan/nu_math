@@ -1,0 +1,27 @@
+\begin{problem}
+  次の(1)，(2)を解答せよ．
+\begin{enumerate}
+\item 1より大きい自然数$n$について，
+不等式$\displaystyle 2^n<\frac{(2n) \, !}{{(n \, !)}^2}<2^{2n}$を証明せよ．
+\item 実数$x_1, \, x_2, \, \cdots\cdots, \, x_n$が
+${x_1}^2+{x_2}^2+\cdots\cdots+{x_n}^2=1$を満たすとき，
+${x_1}^2+2{x_2}^2+\cdots\cdots+n{x_n}^2$の最大値と最小値を求めよ．
+\end{enumerate}
+\end{problem}
+
+\begin{enumerate}
+  \item $2^n < \frac{{2n}\kaizyou}{({n}\kaizyou)^2} < 2^{2n} \cdots (*)$とする．
+  \begin{enumerate}
+    \item $n=2$のとき，$4<6<16$より成立．
+    \item $n=k$のとき，$\frac{{2k}\kaizyou}{({k}\kaizyou)^2} < 2^{2k}$
+
+    $n=k+1$のとき，$2^{k+1} < \frac{2{(k+1)}\kaizyou}{\{{(k+1)}\kaizyou\}^2} \qquad 2^{k+1}<2\cdot\frac{2{k}\kaizyou}{(k\kaizyou)^2}<2\frac{2(k+1)}{k+1} \cdot \frac{2{k}\kaizyou}{({k}\kaizyou)^2}$より成立．
+    また，$2\frac{2(k+1)}{k+1} \cdot \frac{2{k}\kaizyou}{({k}\kaizyou)^2}
+    < 4\cdot\frac{2{k}\kaizyou}{({k}\kaizyou)^2} < 2^{2(k+1)}$より成立．
+  \end{enumerate}
+  (i),(ii)より，2以上のすべての自然数$n$に対して，(*)は成立する． \qed
+
+  \item ${x_1}^2 + {x_2}^2 + \cdots + {x_n}^2 = 1$より，$x_k\ (k<n)$について考えると，${x_1}^2 + 2{x_2}^2 + \cdots + k{x_k}^2 + (k+1){x_{k+1}}^2 + \cdots + {x_n}^2$となり，${x_k}^2 = \alpha$かつ${x_{k+1}}^2 = 0$であるとき，
+  ${x_k}^2 = 0$かつ${x_{k+1}}^2 = \alpha$であり，その他の$x_l\ (l=1,2,\cdots,k,k+1,\cdots,n)$を変化させないときを比べると，${x_k}^2 =\alpha$かつ${x_{k+1}}^2 = 0$の方が，${x_k}^2 = 0$かつ${x_{k+1}}^2 = \alpha$のときよりも小さくなるから，帰納的に，$1 \leq {x_1}^2 + 2{x_2}^2 + \cdots + n{x_n}^2 \leq n$となる．
+  \qed
+\end{enumerate}

@@ -1,0 +1,29 @@
+\begin{problem}
+  $a$，$b$が実数で$|a|+|b|<1$のとき，
+2次方程式$x^2+ax+b=0$の2根の絶対値は，
+ともに1より小さいことを証明せよ．
+\end{problem}
+
+$x^2 + ax + b = 0$の解を$\alpha, \beta$とする．
+$\trenritu{\alpha + \beta = a \\ \alpha\beta = b}$，$\trenritu{\zettaiti{a} = \zettaiti{\alpha+\beta} \\ \zettaiti{b} = \zettaiti{\alpha\beta}}$
+
+また，$1 > \zettaiti{a} + \zettaiti{b} = \zettaiti{\alpha + \beta} + \zettaiti{\alpha\beta}$である．
+
+\begin{enumerate}[(i)]
+  \item 2根の絶対値がともに1以上と仮定すると，明らかに矛盾する．
+  \item 2根の絶対値のうち，一方が1以上であると仮定すると，
+  $1 > \zettaiti{\alpha + \beta} + \zettaiti{\alpha\beta}$
+  \begin{enumerate}[(I)]
+    \item $\alpha > 1$とすると，$-1 < \beta < 0$である．
+    $\zettaiti{\alpha+\beta} + \zettaiti{\alpha\beta} = \alpha +\beta -\alpha\beta =(1-\beta)\alpha + \beta$
+
+    ここで，$(1-\alpha)<1$より，$\alpha < \bunsuu{1}{1-\beta}$である．また，$-1 < \beta <0$より，
+    $\bunsuu12 < \alpha < 1$となるが，これは$\alpha > 1$に矛盾する．
+
+    \item $\alpha < -1$となると，$0 < \beta < 1$である．
+    $\zettaiti{\alpha + \beta} + \zettaiti{\alpha\beta} = -(\alpha + \beta) - \alpha\beta
+    =-(1+\beta)\alpha - \beta$であり，$-(1+\beta)\alpha < 1$より，$\alpha < -\bunsuu{1}{1+\beta}$となるが，$0<\beta<1$より，$-1 < a < -\bunsuu12$となるため，矛盾する．
+  \end{enumerate}
+\end{enumerate}
+
+(I),(II)より，2根の絶対値が1以上と仮定すると矛盾が生じるため，2根の絶対値はともに1よりも小さいことが示された．\qed

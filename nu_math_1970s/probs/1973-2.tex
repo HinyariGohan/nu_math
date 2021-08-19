@@ -1,0 +1,19 @@
+\begin{problem}
+$n$を定まった正の整数とし，$1 \leqq k \leqq n$なる整数$k$のおのおのに，
+$1 \leqq r \leqq n$なる整数$r$を対応させる関数$r=f(k)$があって，
+$k_1<k_2$ならばつねに$f(k_1) \leqq f(k_2)$であるとする．
+このとき，$f(m)=m$となる整数$m$が存在することを証明せよ．
+\end{problem}
+
+$r = f(k)$について，$k_1 < k_2$ならば，$f(k_1) \leq f(k_2)$より，$f(k)$は広義単調増加関数であるから，
+\[\trenritu{f(1) \leq f(2) \leq \cdots \leq f(k) \leq \cdots \leq f(n) \\ 1 \leq \cdots \leq r \leq \cdots \leq n}\]
+となる．ここで，$f(m) = m$となる$m$が存在しないと仮定する．
+
+\begin{enumerate}[(i)]
+  \item $m = 1$のとき，$f(1) \neq 1$より，$f(1) \geq 2$
+  \item $m = 1,2,\cdots,l$のとき，$f(m) \neq m$が成立すると仮定すると，$f(l) \neq l$と，$f(l)\geq f(l-1)$より，$f(l) \geq l+1$となる．
+\end{enumerate}
+
+(i),(ii)から，$1, 2, \cdots ,n$の自然数$m$について，$f(m) \geq m+1$が成立する．
+
+ここで，$1 \leq f(n) \leq n$より，$f(n) \geq n+1$となることはできないため，少なくとも1つは$f(m) = m$となる自然数$m$が存在する．\qed
