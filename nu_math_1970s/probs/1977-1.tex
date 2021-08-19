@@ -1,0 +1,31 @@
+\begin{problem}
+  空間に5点$O(0, \, 0, \, 0)$，$A(3, \, 1, \, 5)$，$B(1, \, 2, \, 4)$，
+$C(2, \, -1, \, -1)$，$D(3, \, 1, \, 2)$がある．
+2点$A$，$B$を通る直線上に動点$P$をとり，
+2点$C$，$D$を通る直線上に動点$Q$をとる．
+\begin{enumerate}
+\item $\overrightarrow{PQ}=\overrightarrow{OR}$を満たす点$R$全体の集合はどのような図形を表すか．
+\item 線分$PQ$の長さの最小値を求めよ．
+\end{enumerate}
+\end{problem}
+
+\begin{enumerate}
+  \item 直線AB上の点Pを以下のように表す．
+
+  $\Vec{OP} = \pgyouretu{x;y;z} = \pgyouretu{3;1;5} + t\pgyouretu{2;-1;3} = \pgyouretu{3+2t;1-t;5-2t}$
+
+  直線CD上の点Qを以下のように表す．
+
+  $\Vec{OQ} = \pgyouretu{x;y;z} = \pgyouretu{2;-1;-1} + s\pgyouretu{-1;-2;-3} = \pgyouretu{2-s;-1-2s;-1-3s}$
+
+  $\Vec{PQ} = \pgyouretu{1+2t+s;2-t+2s;6-3t+3s}$であり，点R$(x,\,y,\,z)$に対して，$\trenritu{x=1+2t+s\\y=2-t+2s\\z=6-3t+3s}$から，$s,t$を消去する．
+
+  $x+2y = 5+5s,\ 3y-z=6s, x+2y=5+5\frac{3y-z}{6}, 6x+12y=30+5(3y-z)$
+
+  よって，$\Vec{OR}$は$6x-3y+5z=30$となるような平面上を動く．
+
+  \item $\zVec{PQ} = \zVec{OR}$より，点と平面の距離公式から，
+  $\zVec{OR} = \frac{\zettaiti{-30}}{\sqrt{36+9+25}} = \frac{30}{\sqrt{70}} = \frac37\sqrt{70}$
+
+  \Ans{$\frac{3}{7}\sqrt{70}$}
+\end{enumerate}

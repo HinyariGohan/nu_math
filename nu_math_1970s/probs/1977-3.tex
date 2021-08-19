@@ -1,0 +1,42 @@
+\begin{problem}
+関数$\displaystyle y=\frac{1}{x}$のグラフ上の2点を結ぶ線分の中点となるような点全体の集合を図示せよ．
+\end{problem}
+
+\tenbig{S}{s}{\frac{1}{s}},\tenbig{T}{t}{\frac{1}{t}}とする．
+2点の中点は，\tenbig{}{\frac{s+t}{2}}{\frac{s+t}{2st}}であり，$(x,\,y)$とすると，$x=\frac{s+t}{2},\,y=\frac{s+t}{2st}$である．
+
+\begin{enumerate}[(i)]
+  \item $s \neq -t$のとき，$st = \frac{x}{y}, s+t=2x$
+  $t^2-2xt+\frac{x}{y} = 0$が異なる2つの実数解を持てば良いから，
+
+  \begin{mawarikomi}{}{
+    \begin{pszahyou}[ul=7mm](-3,3)(-3,3)
+      \def\Fx{1/X}
+      \YGraph\Fx
+      \def\Gx{0}
+      \begin{clipQfunc}\Fx
+        \begin{clipxrange}{0.01,}
+          \emPaint*\zenheimen
+        \end{clipxrange}
+      \end{clipQfunc}
+      \begin{clipQfunc}<hosyugo>\Fx
+        \begin{clipxrange}{,-0.01}
+          \emPaint*\zenheimen
+        \end{clipxrange}
+      \end{clipQfunc}
+      \begin{clipSyougen}{24}
+        \emPaint*\zenheimen
+      \end{clipSyougen}
+      \Kuromaru<size=1.5pt>\O
+    \end{pszahyou}
+  }
+  \begin{align*}
+    x^2-\frac{x}{y} &> 0 \\
+    x^2y^2-xy &> 0\\
+    xy(xy-1) &> 0
+  \end{align*}
+  より，$xy>1$または$xy<0$となる．
+  \item $s = -t$のとき，中点は原点となる．
+\end{mawarikomi}
+\end{enumerate}
+(i),(ii)から，右図の斜線部で境界線を含まない．

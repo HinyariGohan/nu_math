@@ -1,0 +1,47 @@
+\begin{problem}
+  次の(1)，(2)を解答せよ．
+\begin{enumerate}
+\item $a$を正数とするとき，$\displaystyle\lim_{n\to\infty}\frac{1}{n}\log(a^n+a^{2n})$を求めよ．
+\item $xy$平面上に動点$P$がある．
+さいころを投げて，奇数の目が出れば$x$軸の正の方向へ1だけ進み，
+偶数の目が出れば$y$軸の正の方向へ1だけ進むものとする．
+動点$P$は最初原点にあるものとし，
+さいころを8回投げたとき，
+原点から$P$までの距離が6以下となる確率を求めよ．
+\end{enumerate}
+\end{problem}
+
+\begin{enumerate}
+  \item \begin{align*}
+    &\dumyeq \dlim{n\to\infty} \frac{1}{n}\log(a^n+a^{2n}) \\
+    &= \dlim{n\to\infty} \frac{1}{n}\{\log a^n + \log (1+a^n)\} \\
+    &= \dlim{n\to\infty} \log a + \log (1+a^n)^{\frac{1}{n}}
+  \end{align*}
+  \begin{enumerate}
+    \item $a<1$のとき，
+      $\dlim{n\to\infty} \log (1+a^n)^{\frac{1}{n}} = 0$より，
+      $\dlim{n\to\infty} \frac{1}{n} \log (a^n + a^{2n}) = \log a$
+
+    \item $a=1$のとき，
+      $\dlim{n\to\infty} \frac{1}{n}\log 2 = 0$
+
+    \item $a>1$のとき，
+    \begin{align*}
+      &\dumyeq \dlim{n\to\infty} \log a + \log a + \log \left( 1+\frac{1}{a^n} \right)^{\frac{1}{n}} \\
+      &= \dlim{n\to\infty}2\log a + \frac{1}{n}\log \left(1+\frac{1}{a^n} \right) \\
+      &= 2\log a
+    \end{align*}
+    となる．
+  \end{enumerate}
+  (i),(ii),(iii)より，$\dlim{n\to\infty} \frac{1}{n}\log(a^n+a^{2n}) = \trenritu{\log a (a \leq 1) \\ 2\log a(a>1)}$
+  \Ans{$\dlim{n\to\infty} \frac{1}{n}\log(a^n+a^{2n}) = \trenritu{\log a (a \leq 1) \\ 2\log a(a>1)}$}
+
+  \item 止まるマスに，$(0,8),(1,7),(2,1),(3,5),(4,4),(5,3),(6,2),(7,1),(8,0)$であり，キョリは，$4\sqrt2, \sqrt{34},2\sqrt{10},2\sqrt{14},8$のパターンがある．このうち，6以下となるのは，$4\sqrt2,\sqrt{34}$であるから，
+  \begin{align*}
+    &\dumyeq \kumiawase{8}{4}\left( \frac12 \right)^4\left( \frac12 \right)^4+2\times \kumiawase{8}{3} \left( \frac12 \right)^3 \left( \frac12 \right)^5 \\
+    &= \left\{ \frac{8\cdot 7\cdot 6\cdot 5}{4\cdot 3\cdot 2\cdot 1} + 2\times \frac{8\cdot 7\cdot 6}{3\cdot 2\cdot 1} \right\}\left( \frac12 \right)^8 \\
+    &= 91 \left( \frac{1}{2} \right)^7
+  \end{align*}
+
+  \Ans{$\frac{91}{128}$}
+\end{enumerate}
