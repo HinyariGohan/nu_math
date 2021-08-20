@@ -1,0 +1,22 @@
+
+\begin{problem}
+  三角形$ABC$の3辺$BC$，$CA$，$AB$の長さをそれぞれ$a$，$b$，$c$とするとき，
+$\angle A=2\angle C$ならば$a^2=c(b+c)$であることを証明せよ。
+\end{problem}
+
+$\kaku{C} = \theta$とする．正弦定理から，$k$を実数として，
+\[\frac{a}{\sin 2\theta} = \frac{b}{\sin3\theta} = \frac{c}{\sin \theta} = k\]
+を満たす．したがって，$a = k\sin 2\theta, b = k\sin 3\theta, c= k\sin\theta$である．
+
+\begin{align*}
+  (左辺) &= k^2\sin^22\theta \\
+  &= 4k^2 \sin^2\theta \cos^2\theta \\
+\end{align*}
+\begin{align*}
+  (右辺) &= k^2 \sin \theta(\sin 3\theta + \sin \theta) \\
+  &= k^2 \sin \theta(3\sin\theta-4\sin^3\theta + \sin\theta) \\
+  &= -4k^2(\sin 4\theta-\sin^2\theta) \\
+  &= -4k^2\sin^2\theta(\sin^2\theta-1) \\
+  &= 4k^2\sin^2\cos^2\theta
+\end{align*}
+より，$(左辺) = (右辺)$となるため，$\kaku{A} = 2\kaku{C}$であれば，$a^2 = c(b+c)$となる．\qed

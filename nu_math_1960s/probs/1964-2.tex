@@ -1,5 +1,17 @@
 \begin{problem}
-　$f(x)=2-x^2$に対して
+$f(x)=2-x^2$に対して
 $\displaystyle F(t)=\int_t^{t+2}f(x)dx$は
 $t$のどんな値に対して最大または最小となるか。
 \end{problem}
+
+\begin{align*}
+  F(t) &= \dint{t}{t+2}f(x)\,dx = \dint{t}{t+2}(2-x)^2\,dx
+  =\dint{t}{t+2}(x^2-4x+4)\,dx \\
+  &= \teisekibun{\frac13x^3-2x^2+4x}{t}{t+2} \\
+  &= \left\{ \frac13(t+2)^3-2(t+2)^2+4(t+2) \right\} -
+  \left( \frac13t^3-2t^2+4t \right) \\
+  &= \left\{ \frac13(t^3+6t^2+12t+8) -2(t^2+4t+4) + 4t+8 \right\}
+  - \left( \frac13t^3-2t^2+4t \right) \\
+  &= 2t^2-4t+\frac83 = 2(t-1)^2+\frac23
+\end{align*}
+よって，$F(t)$は$t=1$のとき最小値$\frac23$をとる．

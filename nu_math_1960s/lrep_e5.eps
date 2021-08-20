@@ -1,0 +1,114 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%%Creator: emathPs 2.09 tDB (CQB00260@nifty.ne.jp)
+%%BoundingBox: 0 0 114 114
+%%HiResBoundingBox: 0 0 113.81097 113.81097
+/emathsave save def
+ 0 0 0 setrgbcolor
+0.099626401 0.099626401 scale
+/arrowdict 16 dict def
+arrowdict begin
+/mtrx matrix def
+end
+/arrow
+ { arrowdict begin
+ /hekomi exch def
+ /headlength exch def
+ /halfheadthickness exch 2 div def
+ /halfthickness exch 2 div def
+ /tipy exch def /tipx exch def
+ /taily exch def /tailx exch def
+ /dx tipx tailx sub def
+ /dy tipy taily sub def
+ /arrowlength dx dx mul dy dy mul add sqrt def
+ /angle dy dx atan def
+ /base arrowlength headlength sub def
+ /hekomibase base hekomi add def
+ /savematrix mtrx currentmatrix def
+ tailx taily translate
+ angle rotate
+ 0 halfthickness neg moveto
+ hekomibase halfthickness neg lineto
+ base halfheadthickness neg lineto
+ arrowlength 0 lineto
+ base halfheadthickness lineto
+ hekomibase halfthickness lineto
+ 0 halfthickness lineto
+ closepath
+ savematrix setmatrix
+end
+} def
+/ellipsedict 8 dict def
+ellipsedict /mtrx matrix put
+/ellipse
+{ ellipsedict begin
+ /endangle exch def
+ /startangle exch def
+ /yrad exch def
+ /xrad exch def
+ /y exch def
+ /x exch def
+ /savematrix mtrx currentmatrix def
+ x y translate
+ xrad yrad scale
+ 0 0 1 startangle endangle arc
+ savematrix setmatrix
+ end
+} def
+10 setlinewidth
+[] 0 setdash
+0 setlinecap
+0 setlinejoin
+gsave
+grestore
+gsave
+gsave
+newpath 569.05487 1138.10974 moveto
+76.24619 284.53598 lineto
+1061.8634 284.53598 lineto
+closepath
+closepath  stroke
+grestore
+grestore
+gsave
+newpath 404.78378 284.5404 moveto
+766.17386 796.68625 lineto
+stroke
+grestore
+gsave
+gsave
+newpath
+1061.8634 284.53598 99.99435 119.99913 180 arc
+stroke
+grestore
+grestore
+gsave
+gsave
+newpath
+568.97232 1762.14157 1557.63306 -108.44221 -71.55779 arc
+stroke
+grestore
+grestore
+gsave
+gsave
+newpath
+1602.25983 -27.60773 1557.60269 131.55693 168.44133 arc
+stroke
+grestore
+grestore
+gsave
+gsave
+newpath
+1054.22241 209.70947 653.77563 116.15149 173.4299 arc
+stroke
+grestore
+grestore
+gsave
+gsave
+newpath
+475.36865 287.36237 586.3298 -0.27975 60.27888 arc
+stroke
+grestore
+grestore
+showpage
+emathsave restore
+%%EOF

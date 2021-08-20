@@ -1,20 +1,51 @@
 \begin{problem}
-  　次の各問について空欄に数，式，言葉を記入せよ。
+  次の各問について空欄に数，式，言葉を記入せよ。
 \begin{enumerate}
 \item 三角形$ABC$の内部に点$P$があって，
 三角形$PBC$，$PCA$，$PAB$の面積の比が，
 3辺$BC$，$CA$，$AB$の長さの比に等しいとき，
-$P$は三角形$ABC$の（ア）□である。
+$P$は三角形$ABC$の\HAKO である。
 \item 空間で，定線分$AB$に対し，
-$\angle APB$が鈍角になるような点$P$の存在範囲は（イ）□である。
-\item 3乗すると8になる複素数は（ウ）□である。
-\item $x$の方程式$2^x+2^{-x}=a$に根があるための$a$の値の範囲は（エ）□で，
-そのとき$x=$（オ）□である。
-\item 次の無限級数に和があるのは（カ）□の場合で，
-そのとき，和は（キ）□である。
+$\angle APB$が鈍角になるような点$P$の存在範囲は\HAKO である。
+\item 3乗すると8になる複素数は\HAKO である。
+\item $x$の方程式$2^x+2^{-x}=a$に根があるための$a$の値の範囲は\HAKO で，
+そのとき$x=$\HAKO である。
+\item 次の無限級数に和があるのは\HAKO の場合で，
+そのとき，和は\HAKO である。
 \[ x+x(1-x)+x{(1-x)}^2+\cdots+x{(1-x)}^n+\cdots \]
 \item $\displaystyle\int_0^xf(t)dt=\cos3x+c$（$c$は定数）のとき，
-$f(t)$は（ク）□であり，$c$は（ケ）□である。
+$f(t)$は\HAKO であり，$c$は\HAKO である。
 \end{enumerate}
-
 \end{problem}
+
+\begin{enumerate}
+  \item \fbox{ア}\qquad 内心
+  \item \fbox{イ}\qquad AB を直径とする球の内部
+  \item ある複素数を$\omega$とする．
+  \begin{align*}
+    \omega^3 &= 8 \\
+    \omega^3-8 &= 0 \\
+    (\omega-2)(\omega^2+2\omega+4) &= 0
+  \end{align*}
+  これを解いて，\fbox{ウ}\qquad $2, -1\pm\sqrt3 i$
+  \item 相加相乗平均の公式より，
+  $2^x + 2^{-x} \geq 2$ (等号成立は $x=0$のとき) であるから，根があるための$a$の範囲は，\fbox{エ}\qquad $a\geq 2$．
+
+  \begin{align*}
+    2^x + 2^{-x} &= a \\
+    2^{2x} - a \cdot 2^x + 1 &= 0\\
+    2^x &= \frac{a\pm \sqrt{a^2-4}}{2}
+  \end{align*}
+  したがって，両辺底を2とする対数をとって，\fbox{オ}\qquad $x = \log_2\left( a\pm \sqrt{a^2-4} \right) -1$
+
+  \item $\zettaiti{1-x} < 1$より，\fbox{カ}\qquad $0<x<2$のとき．
+  \begin{enumerate}
+    \item $x=1$のとき，1
+    \item $x\neq1$のとき，$\frac{x}{1-(1-x)} = \frac{x}{x} = 1$
+  \end{enumerate}
+  よって，(i),(ii)より，求める和は\fbox{キ}\qquad 1である．
+
+  \item $\dint{0}{x}f(t)\,dt = \cos 3x + C$であり，両辺を$x$で微分すると，$f(x) = -3\sin 3x$である．したがって\fbox{ク}\qquad $f(t) = -3 \sin 3x$．
+
+  また，$\dint{0}{x}(-3\sin 3t)\,dt = \teisekibun{\cos 3x}{0}{t} = \cos 3t+1$であるから，\fbox{ケ}\qquad $c=1$である．
+\end{enumerate}

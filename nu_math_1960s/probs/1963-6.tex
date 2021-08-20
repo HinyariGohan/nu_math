@@ -1,0 +1,28 @@
+
+\begin{problem}
+  $0 \leqq x \leqq 2\pi$の範囲で
+$y=\sin x$および$y=\sin2x$のグラフをかき，
+これらの2曲線によって囲まれた部分の総面積を求めよ。
+\end{problem}
+
+\begin{pszahyou}[ul=15mm,gentenhaiti=nw](-0.5,7)(-1.5,1.5)
+  \def\Fx{sin(X)}
+  \def\Gx{sin(2*X)}
+  \YGraph\Fx
+  \YGraph\Gx
+  \YPaintii*<minx=0,maxx=2*$pi>\Fx\Gx
+\end{pszahyou}
+
+求める面積を$S$とすると，対称性から，$S$は$0$から$\pi$までの面積を2倍したものである．
+\begin{align*}
+  S &= 2\left\{ \dint{0}{\frac{\pi}{3}}(\sin 2x - \sin x)\,dx
+  + \dint{\frac{\pi}{3}}{\pi}(\sin x - \sin 2x) \right\} \\
+  &= 2\left\{ \teisekibun{-\frac12\cos 2x + \cos x}{0}{\frac{\pi}{3}}
+  + \teisekibun{-\cos x + \frac{1}{2}\cos 2x}{\frac{\pi}{3}}{\pi} \right\} \\
+  &= \left[ \left\{ \left( \frac14 + \frac12 \right) - \frac12 \right\}
+  + \left\{ \left( 1+\frac12 \right) - \left( -\frac12 - \frac14 \right) \right\}\right] \\
+  &= 2\ \left( \frac14 + \frac94 \right) \\
+  &= 5
+\end{align*}
+
+\Ans{5}

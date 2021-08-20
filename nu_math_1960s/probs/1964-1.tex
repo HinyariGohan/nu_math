@@ -1,3 +1,33 @@
 \begin{problem}
-　$\sqrt{x-a}=x-b$を$x$について解け。
+$\sqrt{x-a}=x-b$を$x$について解け。
 \end{problem}
+
+定義域から$x-a>0$より，$x>a$の範囲で以下を考える．
+\begin{enumerate}[(i)]
+  \item $x-b>0$のとき
+
+  両辺を二乗すると
+  \begin{align*}
+    x-a &= (x-b)^2 \\
+    x^2 - (2b+1)x + b^2 + a &= 0
+  \end{align*}
+  ここで，この2次方程式に対して判別式を$D$とすると，
+  \begin{align*}
+    D &= (2b+1)^2 - 4(b^2+a) \\
+    &= 4(b-a)+1
+  \end{align*}
+  $D \geq 0$のとき，$x = \frac{(2b-1)\pm\sqrt{4(b-a)+1}}{2}$である．
+  ここで，条件より$x>b$かつ$x>a$であるから，$x = \frac{(2b-1) + \sqrt{4(b-a)+1}}{2}$である．
+
+  \item $x-b<0$のとき
+
+  $y = \sqrt{x-a}$，$y = x-b$について考えると，$\sqrt{x-a} > 0$かつ，$x-b<0$となるため，明らかに解を持たない．
+\end{enumerate}
+
+(i),(ii)より，解は以下の通りとなる．
+
+\Ans{$x = \trenritu{%
+  \frac{(2b-1) + \sqrt{4(b-a)+1}}{2} & (4(b-a) + 1 \geq 0\ のとき) \\
+  解なし & (4(b-a) + 1 < 0\ のとき)
+  }$
+}

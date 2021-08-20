@@ -1,4 +1,30 @@
 \begin{problem}
-　$\displaystyle\frac{\pi}{2}>x \geqq y \geqq 0$のとき，
+$\displaystyle\frac{\pi}{2}>x \geqq y \geqq 0$のとき，
 $x-y$，$\sin x-\sin y$，$\tan x-\tan y$の大小をくらべよ。
 \end{problem}
+
+$f(x) = x - \sin x$とすると，$f'(x) = 1-\cos x$である．
+\RESETKEYA
+\setkeys{zogen}{
+  hensu=x,
+  ranaa=0,ranac=\frac{\pi}{2},
+  ranba=0,ranbb=+,
+  ranca=0,rancb=\nearrow
+}
+\zogen(3,3)
+より，$x \geq \sin x \ (0\leq x < \frac\pi2),\ y \geq \sin y\ (0 \leq y \leq x < \frac\pi2)$であるから，\\
+$x-y \geq \sin x -\sin y\quad (\sin x, \sin y \geq 0)$
+
+また，$g(x) = \tan x - x$とすると，$g'(x) = \frac1{cos^2x} - 1 = \tan^2x$
+\RESETKEYA
+\setkeys{zogen}{
+  hensu=t,
+  ranaa=0,ranac=\frac{\pi}{2},
+  ranba=0,ranbb=+,
+  ranca=0,rancb=\nearrow,
+  kansub=g'(t),kansuc=g(t)
+}
+\zogen(3,3)
+より，$\tan x \geq x \quad(0 \leq x < \frac{\pi}{2}),\ \tan y \geq y\quad (0 \geq y \geq x < \frac{\pi}{2})$であるから，$\tan x - \tan y \geq x-y \ (x,y \geq 0)$である．
+
+よって，$\sin x - \sin y \leq x-y \leq \tan x - \tan y$となる．

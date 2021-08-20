@@ -1,0 +1,38 @@
+
+\begin{problem}
+1辺の長さ$a$の正三角形の面積を2等分する線分のうちで
+最も短いものの長さを求めよ。
+\end{problem}
+
+
+\begin{mawarikomi}{}{
+\begin{pszahyou*}[ul=10mm](-2,2)(-2,2)
+  \EnkoToubun\O{2}{90}{+}{3}{A,B,C}
+  \Takakkei{\A\B\C}
+  \Bunten\B\C12\D
+  \Bunten\A\C23\E
+  \Drawline{\D\E}
+  \Kakukigou\A\C\B(-7pt,1pt)[l]{$60\degree$}
+  \HenKo\B\C{$l$}
+  \HenKo\A\B{$a$}
+  \HenKo\E\D{$x$}
+  \HenKo\C\E{$m$}
+\end{pszahyou*}
+}
+\begin{align*}
+  \frac12 \times l \times m \sin 60\degree
+  &= \frac12 a \times a \times \sin 60\degree \times \frac12 \\
+  lm &= \frac12 a^2
+\end{align*}
+\begin{align*}
+  x^2 &= l^2 + m^2 - 2lm \times \frac12 = (l+m)^2 -3lm\\
+  &= \left( \frac{a^2}{2m} + m \right)^2 - \frac32 a^2
+  = m^2 + \frac{a^4}{4m^2} + a^2 - \frac32 a^2 \\
+  &= m^2 + \frac{a^4}{4m^2} - \frac12 a^2
+\end{align*}
+\end{mawarikomi}
+ここで，相加相乗平均の関係より，
+\[m^2 + \frac{a^4}{4m^2} \geq 2 \sqrt{m^2 \cdot \frac{a^4}{4m^2}} = a^2\]
+であり，等号成立は$m^2 = \frac{a^4}{4m^2}$のとき，つまり，$m = \frac{a}{\sqrt2}$のときである．
+
+\Ans{$x_{\mathrm{min}} = \frac{a}{\sqrt2}$}

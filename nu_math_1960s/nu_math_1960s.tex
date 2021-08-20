@@ -9,12 +9,13 @@ hanging_punctuation,
 %baselineskip=1.5zw,
 %fleqn
 ]{jlreq}
-\usepackage{gotahu20210704}
+\usepackage{gotahu20210815}
 \jlreqsetup{%
 quote_end_indent=2zw%
 }
-
+%\setlength{\mathindent}{5zw}
 \setlength{\leftmargini}{2zw}
+\setlength{\headheight}{17.0pt}
 
 \usepackage{EMxymatrix}
 \usepackage{EMnidan}
@@ -24,6 +25,7 @@ quote_end_indent=2zw%
 \begin{document}
 
 \preEqlabel{\cdots\cdots}
+%\postEqlabel{\hspace{8zw}\null}
 \resetcounter{equation}[daimon]
 
 \pagestyle{fancy}
@@ -53,6 +55,7 @@ quote_end_indent=2zw%
 \input{probs/1963-3.tex}
 \input{probs/1963-4.tex}
 \input{probs/1963-5.tex}
+\input{probs/1963-6.tex}
 
 \nendo{1964}
 \input{probs/1964-1.tex}
@@ -60,6 +63,10 @@ quote_end_indent=2zw%
 \input{probs/1964-3.tex}
 \input{probs/1964-4.tex}
 \input{probs/1964-5.tex}
+
+\nendo{1965}
+\input{probs/1965-1.tex}
+\input{probs/1965-2.tex}
 
 \nendo{1966}
 \input{probs/1966-5.tex}

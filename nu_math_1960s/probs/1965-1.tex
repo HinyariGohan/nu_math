@@ -1,0 +1,27 @@
+
+\begin{problem}
+  $a\geqq2$，$b\geqq2$，$c\geqq2$，$d\geqq2$のとき，
+  $abcd>a+b+c+d$であることを示せ。
+\end{problem}
+\begin{enumerate}[(i)]
+  \item $ ab \geq a+b $を示す．
+
+  $ab-(a+b) = a(b-1)-(b-1)-1=(a-1)(b-1)-1$である．
+
+  $a\geq 2,b\geq 2$より，$(a-1)(b-1) \geq 1$であるから，$ab \geq a+b$である．
+
+  \item $abc > a+b+c$を示す．
+
+  $(a+b)c - (a+b+c) = (a+b)(c-1)-(c-1)-1 = (a+b-1)(c-1) -1$である．
+
+  $a+b \geq 4, c-1 \geq 1$より，$c(a+b-1)(c-1)\geq 3$であるから，$abc > a+b+c$である．
+
+  (i),(ii)より，$abc \geq (a+b)c > a+b+c$である．
+
+  \item $abcd > a+b+c+d$を示す．
+
+  $(a+b+c)d - (a+b+c+d) = (a+b+c)(d-1) - (d-1) - 1 = (a+b+c-1)(d-1)-1$である．
+
+  $a+b+c-1 \geq 5, d-1\geq1$であるから，$(a+b+c-1)(d-1)-1 > 0$である．
+\end{enumerate}
+(iii)から，$abcd > (a+b+c)d > a+b+c+d$であるから，$abcd > a+b+c+d$が示された．\qed
