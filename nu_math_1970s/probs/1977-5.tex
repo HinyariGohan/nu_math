@@ -1,0 +1,48 @@
+
+\begin{problem}
+  次の(1)，(2)を解答せよ．
+\begin{enumerate}
+\item $\displaystyle f_n(x)=\int_0^x(x-t)\sin ntdt$ $(n=1, \, 2, \, 3, \, \cdots\cdots)$を求めよ．
+\item $\displaystyle 0 \leqq x \leqq \frac{\pi}{2}$における$f_n(x)$の最大値を$a_n$とするとき，
+$\displaystyle\lim_{n\to\infty}na_n$を求めよ．
+\end{enumerate}
+\end{problem}
+
+\begin{enumerate}
+  \item $f_n(x) = \dint{0}{x}x\sin nt\,dt = \dint{0}{t}t \sin nt \,dt$．
+  \begin{multicols}{2}
+  \begin{align*}
+    F(x) &= \dint{0}{x}x \sin nt \, dt \text{とする} \\
+    &= x \dint{0}{nx}\frac{1}{n}\sin y \,dy\\
+    &= x \teisekibun{-\frac{1}{n}\cos y}{0}{nx} \\
+    &= \frac{x}{n}(1-\cos nx)\\
+  \end{align*}
+  \begin{align*}
+      G(x) &= \dint{0}{x}(t-\sin nt)\,dt \\
+      &= \frac{1}{n} \dint{0}{nx}\frac{1}{n}\sin y\,dy \\
+      &= \frac{1}{n^2}\teisekibun{-y\cos y}{0}{nx} + \frac{1}{n^2}\dint{0}{nx}\cos y\,dy \\
+      &=-\frac{1}{n^2}(-nx \cos nx) + \teisekibun{\sin y}{0}{nx} \\
+      &= -\frac{x}{n}\cos nx + \frac{1}{n^2}\sin nx\\
+  \end{align*}
+
+  \end{multicols}
+  $f_n(x) = F(x) - G(x)$より，$f_n(x) = \frac{x}{n} - \frac{1}{n^2}\sin nx$である．
+
+  \Ans{$f_n(x) = \frac{x}{n} - \frac{1}{n^2}\sin nx$}
+  \item ${f_n}'(x) = \frac{1}{n}(1-\cos nx)$
+  \RESETKEYA
+  \setkeys{zogen}{
+    hensu=x,
+    ranaa=0,ranac=\frac{2\pi}{n},ranae=\frac{4\pi}{n},
+    ranba=0,ranbb=+,ranbc=0,ranbd=+,ranbe=0,
+    rancb=\nearrow,rancd=\nearrow,rancf=\nearrow,
+    kansub=f_n'(x),kansuc=f_n(x)
+  }
+  \zogen(3,6)
+
+  $a_n = f_n\left( \frac{\pi}{2} \right) = \frac{\pi}{2n} - \frac{1}{n^2}\sin\frac{n\pi}{2}$であり，$\dlim{n\to\infty} n a_n = \frac{\pi}{2} - \frac{1}{n} \sin\frac{n\pi}{2}$である．
+
+  ここで，$-1 \leq \sin \frac{n\pi}{2} \leq 1$より，$-\frac{1}{n} \leq -\frac{1}{n} \sin \frac{n\pi}{2} \leq \frac{1}{n}$である．$\dlim{n\to\infty} \frac{1}{n} , \dlim{n\to\infty} -\frac{1}{n} = 0$となるから，はさみうちの原理より，$\dlim{n\to\infty} -\frac{1}{n} \frac{\sin n\pi}{2} = 0$となる．
+
+  \Ans{$\dlim{n\to\infty}\ n a_n = \frac{\pi}{2}$}
+\end{enumerate}

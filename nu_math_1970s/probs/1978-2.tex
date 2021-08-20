@@ -1,0 +1,23 @@
+
+\begin{problem}
+  平面上に3角形$ABC$が与えられている．
+この平面上の点$P$に対して，
+$AP$の中点を$Q$，$BQ$の中点を$R$，$CR$の中点を$S$とする．
+このとき，$S=P$となる点$P$がただ1つ存在することを証明せよ．
+また，この点を$P_0$とするとき，
+$\triangle ABC$と$\triangle P_0BC$の面積の比を求めよ．
+\end{problem}
+
+$\Vec{AB} = \vec{b}, \Vec{AC} = \vec{c}$とする．また，$\Vec{AP} = s\vec{b} + t\vec{c}$とする．
+
+このとき，$\trenritu{\Vec{AQ} = \frac{1}{2}(s\vec{b}+t\vec{c}) \\
+\Vec{AR} = \frac{1}{4}(s\vec{b}+t\vec{c}) + \frac12 \vec{b} \\
+\Vec{AP} = \Vec{AS} = \frac{1}{8}(s\vec{b} + t\vec{c}) + \frac14\vec{b} + \frac12 \vec{c}}$より，
+それぞれ係数比較をして，
+$\trenritu{\frac18 s + \frac14 = s \\ \frac18t + \frac12 = t}$である．
+よってこれを$s,t$について解くと，
+$(s,t) = \left( \frac27,\,\frac47 \right) $となるため，$\mathrm{S} = \mathrm{P}$となる点がただ一つ存在する．
+
+直線ABとBCの交点を$\mathrm{P}_1$とする．
+このとき，$k \bekutoru*[caprm]{AP_0}=\bekutoru*[caprm]{AP_1}$より，$k=\frac76$となるため，
+$\bekutoru*[caprm]{AP_1} : \bekutoru*[caprm]{P_0P_1} = 7:1$となり，$\sankaku{ABC} : \sankaku*[caprm]{P_0BC} = 7:1$となる．

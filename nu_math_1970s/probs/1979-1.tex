@@ -1,0 +1,33 @@
+
+\begin{problem}
+  行列$A=\begin{pmatrix} 2 & 1 \\ 1 & 1 \end{pmatrix}$で表される1次変換によって，
+  点$P(x, \, y)$が点$P'(x', \, y')$にうつるとき，
+  次の(1)，(2)を解答せよ．
+  \begin{enumerate}
+  \item 原点を$O$とするとき，すべての点$P$に対して，
+  不等式$OP' \leqq t \cdot OP$が成り立つような実数$t$の最小値$t_0$を求めよ．
+  \item $OP'=t_0 \cdot OP$を満たす点$P$全体のなす集合は，
+  直線であることを証明せよ．
+  また，この直線の方程式を求めよ．
+  \end{enumerate}
+\end{problem}
+
+$\pgyouretu{x';y'} = \gyouretu2111\pgyouretu{x;y}$より，
+$\trenritu{x' = 2x + y\\y' = x + y}$である．
+条件より，$(2x+y)^2 + (x+y)^2 \leq t(x^2+y^2)$であり，これを整理すると，
+$5x^2 + 6xy + 2y^2 \leq t^2(x^2 + y^2)$である．
+\begin{enumerate}[(i)]
+  \item $y = 0$のとき，$5x^2 \leq t^2x^2$より，$\sqrt{5} \leq t$
+  \item $y \neq 0$のとき，
+  \[5\frac{x^2}{y^2} + 6\frac{x}{y} + 2 \leq t^2\left( \frac{x^2}{y^2} + 1 \right)\]
+  となる．ここで，$\frac{x}{y} = s$とすると，
+  \begin{align*}
+    (5-t^2)s^2 + 6s + 2 - t^2 &\leq 0 \\
+    (5-t^2)\left\{ s + \frac{3}{5-t^2} \right\}^2 + 2 - t^2 - \frac{9}{5-t^2} &\leq 0 \qquad (t^2 \neq s) \\
+    2-t^2 - \frac{9}{5-t^2} &\leq 0 \\
+    \frac{t^2-7t^4+1}{5-t^2} &\leq 0
+  \end{align*}
+  これを解いて，$t_0 = \frac{3-\sqrt5}{2}$である．
+\end{enumerate}
+
+\Ans{$t_0 = \frac{3-\sqrt5}{2}$}
