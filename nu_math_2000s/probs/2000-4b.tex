@@ -1,0 +1,82 @@
+\begin{problem}
+実数を係数とする3次方程式
+  \begin{center}
+    $x^3+px^2+qx+r=0$
+  \end{center}
+は,相異なる虚数解$\alpha,\beta$と実数解$\gamma$をもつとする.
+  \begin{enumerate}
+    \item $\beta = \overline{\alpha}$ が成り立つことを証明せよ.ここで,$\overline{\alpha}$は$\alpha$と共役な複素数を表す.
+    \item $\alpha,\beta,\gamma$が等式$\alpha\beta+\beta\gamma+\gamma\alpha=3$を満たし,さらに複素数平面上で$\alpha,\beta,\gamma$を表す3点は1辺の長さが$\sqrt{3}$の正三角形をなすものとする.このとき,実数の組$(p,q,r)$をすべて求めよ.
+  \end{enumerate}
+\end{problem}
+\kaie　%(2)図表作成%
+\begin{enumerate}
+  \item
+  \begin{align}
+    x^3+px^2+qx+r=0
+  \end{align}
+  とする.　$\alpha$は①の解の一つであるから,
+  \begin{align*}
+    \alpha^3+p\alpha^2+q\alpha+r &= 0\\
+    両辺に共役な複素数をとると,　　　\overline{\alpha^3+p\alpha^2+q\alpha+r} &= \overline{0}\\
+    \overline{\alpha^3}+p\overline{\alpha^2}+q\overline{\alpha}+\gamma &= 0\\
+  \end{align*}
+  より,$\overline{\alpha} \neq \alpha$.　いま,$\alpha$と$\beta$は①の虚数解の2つであるから,$\overline{\alpha}$は$\alpha$と共役な複素数であることを利用すると,$\beta = \overline{\alpha}$といえる.\\
+  \item 複素数平面上で$\alpha,\beta,\gamma$を表す3点が表す図形は正三角形であるから,%
+  \begin{enumerate}[(i)\ ]
+    \item $\alpha,\beta$の実数部分が$\gamma$よりも大きいとき
+    \begin{align*}
+      \gamma=\alpha とすると,　　　\alpha &= a+\bunsuu32+\bunsuu{\sqrt3}2i\\
+                                \beta &= a+\bunsuu32-\bunsuu{\sqrt3}2i　　とかける.
+    \end{align*}
+    \begin{align*}
+      \alpha\beta+\beta\gamma+\gamma\alpha &= \left(a+\bunsuu32\right)^2+\bunsuu34+2a\left(a+\bunsuu32\right)\\
+      &= a^2+3a+3+2a^2+3a\\
+      &= 3a^2+6a+3\\
+      &= 3(a+1)^2 =3　　より,a=0,-2となる.
+    \end{align*}
+    \begin{enumerate}[(A)\ ]
+      \item $a=0$のとき\\
+      $\left\{%
+          \begin{array}{l}
+            \alpha+\beta+\gamma=-p\\
+            \alpha\beta+\beta\gamma+\gamma\alpha=q
+            \alpha\beta\gamma=-r
+          \end{array}
+      \right.$　　　より,
+      \begin{center}
+        $p=-3,q=3,r=0$
+      \end{center}
+      \item $a=-2$のとき
+      \begin{center}
+        同様にして,　　$p=3,q=3,r=2$\\
+        \vspace{15pt} $\therefore$　　\emkasen<kasensyu=wave>{$(p,q,r)=(-3,3,0),(3,3,2)$}
+      \end{center}
+    \end{enumerate}
+  \item $\alpha,\beta$の実数部分が$\gamma$よりも小さいとき
+  \begin{align*}
+      \gamma=\alpha とすると,　　　\alpha &= a-\bunsuu32+\bunsuu{\sqrt3}2i\\
+                                \beta &= a-\bunsuu32-\bunsuu{\sqrt3}2i　　とかける.
+    \end{align*}
+    \begin{align*}
+      \alpha\beta+\beta\gamma+\gamma\alpha &= \left(a-\bunsuu32\right)^2+\bunsuu34+a(2a-3)\\
+      &= a^2-3a+3+2a^2-3a\\
+      &= 3a^2-6a+3\\
+      &= 3(a-1)^2 =3　　より,a=0,2となる.
+    \end{align*}
+    \begin{enumerate}[(A)\ ]
+      \item $a=0$のとき
+      \begin{center}
+        (i)のときと同様にして,　　$p=3,q=3,r=0$
+      \end{center}
+      \item $a=2$のとき
+      \begin{center}
+        同様にして,　　$p=-3,q=3,r=-2$\\
+        \vspace{15pt} $\therefore$　　\emkasen<kasensyu=wave>{$(p,q,r)=(3,3,0),(-3,3,-2)$}
+      \end{center}
+    \end{enumerate}
+  \end{enumerate}
+  \vspace{15pt}
+  よって,(i)(ii)から,
+  \Ans{$(p,q,r)=(-3,3,0),(3,3,2),(3,3,0),(-3,3,-2)$}
+\end{enumerate}

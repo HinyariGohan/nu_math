@@ -1,0 +1,48 @@
+\begin{problem}
+数直線上の原点$O$から出発して,硬貨を投げながら駒を整数点上動かすゲームを考える.\, 毎回硬貨を投げて表が出れば$+1$,裏が出れば$-1$,それぞれ駒を進めるとする.\, ただし,点$-1$または点$3$に着いたときは以後そこにとどまるものとする.
+  \begin{enumerate}[(1)\ ]
+    \item $k$回目に硬貨を投げたあと,駒が点$1$にある確率を求めよ.
+    \item $k$回目に硬貨を投げたあと,駒がある点$X_k$の期待値$E[X_k]$を求めよ.
+  \end{enumerate}
+\end{problem}
+%%%%謎エラー%%%%
+\kaie
+\begin{enumerate}
+  \item $k$回目に駒が$l$にいる確率を$P_k(l)$とする.題意より,
+  \begin{align*}
+    P_{k+1}(2) &= P_k(2)+\frac12P_k(1)\\
+    P_{k+1}(1) &= \frac12P_k(0)\\
+    P_{k+1}(0) &= \frac12P_k(1)\\
+    P_{k+1}(-1) &= P_k(-1)+\frac12P_k(0).\\
+  \end{align*}
+  \begin{enumerate}
+    \item $k=2m-1$のとき
+    \begin{align*}
+      P_{2m-1}(-1)
+      &= \left(\frac12\right)
+        + \frac12\left(\frac14\right)
+        + \frac12\left(\frac14\right)^2
+        + \cdots
+        + \frac12\left(\frac14\right)^{2m-1}\\
+      &= \frac12 \times \frac43\left\{1-\left(\frac14\right)^m\right\} \\
+      &= \frac23\left\{1-\left(\frac14\right)^m\right\}\\
+      P_{2m-1}(0) &= 0\\
+      P_{2m-1}(1) &= 2\left(\frac14\right)^{m}\\
+      P_{2m-1}(2) &= \frac13\left\{1-4\left(\frac14\right)^m\right\}\\
+    \end{align*}
+    \item $k=2m$のとき
+    \begin{align*}
+      P_{2m-1}(-1) &= \frac23\left\{1-\left(\frac14\right)^m\right\}\\
+      P_{2m-1}(0) &= \left(\frac14\right)^{m}\\
+      P_{2m-1}(1) &= 0\\
+      P_{2m-1}(2) &= \frac13\left\{1-\left(\frac14\right)^m\right\}\\
+    \end{align*}
+  \end{enumerate}
+
+  \Ans{$\therefore P_k(1) =%
+    \trenritu{%
+      2\left(\frac14\right)^m & (k:奇数) \\%
+      0 & (k:偶数)}$}%
+
+  \item fjoa
+\end{enumerate}

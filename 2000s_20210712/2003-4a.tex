@@ -1,0 +1,55 @@
+\begin{problem}
+  \begin{enumerate}
+    \item 平行四辺形$ABCD$において,$AB=CD=a, BC=AD=b, BD=c, AC=d$とする.このとき,$a^2+b^2=\bunsuu12(c^2+d^2)$が成り立つことを証明せよ.
+    \item 3つの正の数$a,b,c \; (0 < a \leq b \leq c)$が$a^2+b^2 > c^2$を満たすとき,各面の三角形の辺の長さを$a,b,c$とする四面体が作れることを証明せよ.
+  \end{enumerate}
+\end{problem}
+\kaie  %%%@ごたふ　図と連立方程式の位置%%%
+\begin{enumerate}
+  \item 余弦定理から,$\kaku A= \theta$ とすると,
+    \begin{align*}
+    c^2 &= a^2+b^2-2ab \cos \theta \houteisiki{\label{20031}}\\
+    d^2 &= a^2+b^2-2ab \cos (\pi-\theta) \\
+    d^2 &= a^2+b^2-2ab \cos \theta
+  \end{align*}
+
+  \begin{align*}
+    2(a^2+b^2) &= c^2+d^2\\
+    a^2+b^2 &= \bunsuu12(c^2+d^2)
+  \end{align*}
+  \item
+  \begin{align*}
+    a^2+b^2 > c^2 から, \cos\kaku A &> 0\\
+    \kaku A &< \bunsuu{\pi}{2} \;より, \sankaku ABC は鋭角三角形である.
+  \end{align*}
+  これより,合同な鋭角三角形$ABC$によって四面体が作られるためには,長さ$a,b,c$の鋭角三角形で出来た四面体を埋めることのできる直方体が存在することを示せばよい.
+
+  \begin{mawarikomi}{}{\begin{psZahyou*}[ul=8mm,Ex={(1,0)},Ey={r(.667,42)}](-0.5,4.5)(-0.5,5.5)(-0.5,3.5)
+    \iiitenretu*{%
+      A(0,5,3);B(0,0,3);C(4,0,3);D(4,5,3);E(0,5,0);G(4,0,0);H(4,5,0)
+    }
+    \iiiTakakkei<linethickness=0.5pt>{\O\B\A\E\H\G}
+    \iiiDrawlines<linethickness=0.5pt>{\C\G\O;\G\C\D;\A\D\H;\O\E;\B\C}
+    \iiiTakakkei{\A\O\H}
+    \iiiDrawlines{\O\C;\C\H;\A\C}
+    \iiitenretu**{A[n];[B]O[s];[C]H[se]}
+  \end{psZahyou*}}
+  \begin{displaymath}
+    \left\{
+    \begin{array}{l}
+      x^2+y^2=a^2 \\
+      y^2+z^2=b^2 \\
+      z^2+x^2=c^2
+    \end{array}\right.
+  \end{displaymath}
+
+  \begin{align*}
+    辺々足すと, 2(x^2+y^2+z^2) &= a^2+b^2+c^2 \\
+    \therefore \;
+    x &= \displaystyle\sqrt{\bunsuu{a^2+c^2-b^2}{2}} \\
+    y &= \displaystyle\sqrt{\bunsuu{a^2+b^2-c^2}{2}} \\
+    z &= \displaystyle\sqrt{\bunsuu{b^2+c^2-a^2}{2}} \\
+  \end{align*}
+  \end{mawarikomi}
+  ここで,「$a^2+c^2 > b^2$かつ$a^2+b^2 > c^2$かつ$b^2+c^2 > a^2$」であり，$x,y,z$が存在すると言えることから,四面体は存在することが示された.
+\end{enumerate}
