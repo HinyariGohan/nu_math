@@ -1,0 +1,25 @@
+\begin{problem}
+閉区間$[0,2\pi]$上で定義された$x$の関数$f(x)=\displaystyle\int^\pi_0 \sin \left(|t-x| + \bunsuu{\pi}4\right) dt$　の最大値および最小値とそのときの$x$の値をそれぞれ求めよ.
+\end{problem}
+\kaie
+\begin{enumerate}[(i)\ ]
+  \item $x>\pi$　のとき
+    \begin{align*}
+      f(x) &= \int^\pi_0 \sin(x-t+\frac{\pi}4)dt\\
+      &= \int^\pi_0 \sin(x-t)\cos\frac\pi 4 + \cos(x-t)\sin\frac\pi 4 dt\\
+      &=\frac1{\sqrt{2}} \left\{\int^{\pi}_0 \sin(x-t) + \cos(x-t) \right\} dt\\
+      &= \frac{\sqrt{2}}2 [\cos(x-t) - \sin(x-t)]^\pi_0\\
+      &= \frac{\sqrt{2}}2 \left(\left\{\cos(x-t) - \sin(x-t)\right\} - \left(\cos x - \sin x\right)\right)\\
+      &= \frac{\sqrt{2}}2 (s\sin x - 2 \cos x)\\
+      &= 2 \sin(x-\bunsuu14 \pi)
+    \end{align*}
+    \begin{center}
+      \emkasen<kasensyu=wave>{最大値：\sqrt{2}　(x=\piのとき),最小値：-2　(x=\bunsuu74\piのとき)}
+    \end{center}
+  \item $0 \leq x \leq \pi$のとき
+    \begin{align*}
+      f(x) &= \int^x_0 \sin(x-t+\frac\pi 4)dt + \int^\pi_x \sin(t-x+\frac\pi 4)dt\\
+      &= \frac{\sqrt{2}}2 \int^x_0 \sin(x-t)+\cos(x-t)dt + \frac{\sqrt{2}}2 \int^\pi_x \sin(t-x)+\cos(t-x)dt\\
+      &=
+    \end{align*}
+\end{enumerate}

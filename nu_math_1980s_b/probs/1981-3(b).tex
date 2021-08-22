@@ -1,0 +1,17 @@
+\begin{problem}
+  $n$を正の整数として、関係式$f(x)=(x-1)^n+2 \displaystyle \int^1_0 f(t)dt$を満たす関数$f(x)$を求めよ。
+\end{problem}
+
+$a=\displaystyle \int^1_0 f(t)dt$とおく.
+
+$f(x)=(x-1)^n+2a$より、
+
+\begin{align*}
+  a &= \displaystyle \int^1_0 \left((t-1)^n+2a\right)dt \\
+  &= \frac{1}{n+1}\left[(t-1)^{n+1}\right]^1_0 + 2a\left[t\right]^1_0 \\
+  &= \frac{(-1)^{n+2}}{n+1} + 2a \\
+  &= \frac{(-1)^n}{n+1} + 2a \\
+  \therefore a &= \frac{(-1)^{n+1}}{n+1}
+  \end{align*}
+
+  \rightline{$\therefore \uline[lines=2,position=-10pt]{f(x)=(x-1)^n-\bunsuu{(-1)^n}{n+1}}\qquad\qquad$}

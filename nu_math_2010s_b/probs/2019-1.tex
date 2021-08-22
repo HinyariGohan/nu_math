@@ -1,0 +1,43 @@
+\begin{problem}
+    \quad $a$を実数とし,関数$f(x)=x^2+ax-a$ と $F(x)=\displaystyle\int^x_0 f(t)dt$を考える.\\
+    \quad 関数 $y=F(x)-f(x)$ のグラフが $x$ 軸と異なる3点で交わるための $a$ の条件を求めよ.
+\end{problem}
+
+\kaie\\
+\begin{align*}
+    F(x) &= \int^x_0(t^2+at-a)dt \\
+    &= \left[\bunsuu{1}{3}t^3+\bunsuu{a}{2}t^2-at \right]^x_0　\\
+    &= \bunsuu{1}{3}x^3+\bunsuu{a}{2}x^2-ax.
+\end{align*}
+
+であるので,$g(x)=F(x)-f(x)$ とおくと,\\
+\begin{align*}
+    g(x) &=\left(\bunsuu{1}{3}x^3+\bunsuu{a}{2}x^2 \right) - (x^2+ax-a)\\
+    &=\bunsuu{1}{3}x^3+\left(\bunsuu{a}{2}-1\right)x^2-2ax+a,\\\\
+    g'(x) &= x^2+(a-2)x-2ax\\
+    &= (x+a)(x-2).
+\end{align*}
+
+$g(x)$は3次関数であるから,$y=g(x)$のグラフが$x$軸と相異なる3点で交わる条件は,\\
+\underline{「$g(x)$が極値をもち,かつ,$（極大値）×（極小値) < 0$」}をみたすことである.\\
+\qquad これは,\underline{「$-a \neq 2,かつ,g(-a)g(2) < 0$」}と言い換えられる.\\\\
+\qquad いま,　
+\begin{align*}
+    g(-a) &= -\bunsuu{a^3}{3}+\left(\bunsuu{a}{2}-1\right)a^2+2a^2+a\\
+    &= \bunsuu{1}{6}a(a^2+6a+6),\\\\
+    g(2) &= \bunsuu{8}{3}+2(a-2)-4a+a\\
+    &= -a-\bunsuu{4}{3}
+\end{align*}
+であるので,
+$g(-a)g(2) < 0$ より,
+\begin{align*}
+    \bunsuu{1}{6}a(a^2+6a+6)\left(-a-\bunsuu{4}{3}\right) &< 0\\
+    \doti　a(a^2+6a+6)\left(a+\bunsuu{4}{3}\right) &> 0\\
+    \doti　a(a+3-\sqrt{3})(a+3+\sqrt{3})(a+\bunsuu{4}{3}) &> 0
+    　が求まる.
+\end{align*}\\
+
+
+$\therefore$ 求める$a$の条件は,
+\qquad \uline[lines=2,position=-8pt]{$a < -3-\sqrt{3}, -\bunsuu{4}{3} < a < -3+\sqrt{3}, 0 < a.$}\\
+\rightline{(これは,$a = 2$を満たしている.)\qquad\qquad}

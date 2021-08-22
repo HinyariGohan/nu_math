@@ -1,0 +1,27 @@
+\begin{problem}
+$c$を自然対数の底とする.　$e \leq p < q$ のとき,不等式$\log(\log q)-\log(\log p) < \bunsuu{q-p}e$が成り立つことを証明せよ.
+\end{problem}
+\kaie
+　$q-p>0$より,\\
+　$\log(\log q)-\log(\log p) < \bunsuu{q-p}e　\doti　\frac{\log(\log q)-\log(\log p)}{q-p} < \frac1e$　　を示せばよい.\\
+$f(x)=\log(\log x)$とすると,平均値の定理から,
+\begin{center}
+  $\frac{f(q)-f(p)}{q-p}=f'(c)$
+\end{center}
+　をみたすような$c$が　$e \leq p < c < q$　の範囲に存在する.
+\begin{align*}
+  f'(x) &= \frac1{x \log x}\\
+  f''(x) &= -x^2(\log x)^{-1}-x^{-2}\\
+  &= \frac{-(\log x+1)}{x^2\log x}
+\end{align*}
+
+% 増減表 %
+
+$f'(x)$は$x>1$の範囲において単調減少する.　よって,
+\begin{center}
+  $f'(c) < f'(p) \leq f'(e)　から,$\\
+  $f'(c) < \bunsuu1e　となる。$\\
+  \vspace{15pt}
+  $\therefore　　\frac{\log(\log q) - \log(\log p)}{q-p} < \bunsuu1e　より,$\\
+  $\log(\log q) - \log(\log p) < \bunsuu{q-p}{c}　が導かれた.$
+\end{center}
