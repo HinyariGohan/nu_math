@@ -1,6 +1,37 @@
 \begin{problem}
   \begin{enumerate}[(1)\ ]
-    \item 連続関数$f(x)$が,すべての実数$x$について$f(\pi-x)=f(x)$をみたすとき,$\int^\pi_0 \left(x-\frac{\pi}2\right) f(x)dx = 0 $が成り立つことを証明せよ.
-    \item $\int^\pi_0 \frac{x \sin^3 x}{4-\cos^2 x}$を求めよ.
+    \item 連続関数$f(x)$が,すべての実数$x$について$f(\pi-x)=f(x)$をみたすとき,$\displaystyle\int^\pi_0 \left(x-\frac{\pi}2\right) f(x)dx = 0 $が成り立つことを証明せよ.
+    \item $\displaystyle\int^\pi_0 \frac{x \sin^3 x}{4-\cos^2 x}$を求めよ.
   \end{enumerate}
 \end{problem}
+\kaie
+\begin{enumerate}
+  \item \begin{align*}
+          \displaystyle\int^\pi_0 \left(x-\frac{\pi}2\right) f(x)dx
+          &= \displaystyle\int^\pi_0 \left\{(\pi-x)-\frac{\pi}2\right\}f(\pi-x)dx \\
+          \displaystyle\int^\pi_0 \left(x-\frac{\pi}2\right) f(x)dx
+          &= -\displaystyle\int^\pi_0 \left(x-\frac{\pi}2\right) f(x)dx\\
+          2\displaystyle\int^\pi_0 \left(x-\frac{\pi}2\right) f(x)dx
+          &= 0\\
+          \displaystyle\int^\pi_0 \left(x-\frac{\pi}2\right) f(x)dx
+          &= 0\\
+        \end{align*}
+  \item \begin{align*}
+          \displaystyle\int^\pi_0 \frac{x \sin^3 x}{4-\cos^2 x}
+          &= \displaystyle\int ^\pi_0 \frac{(\pi-x)\sin^3 (\pi-x)dx}{4-\cos^2 (\pi-x)dx}\\
+          &= \pi \displaystyle\int^\pi_0 \frac{\sin^3 x}{4-\cos^2 x}dx-\displaystyle\int^\pi_0\frac{x\sin^3 x}{4-\cos^2 x}dx\\
+          \displaystyle\int^\pi_0 \frac{x \sin^3 x}{4-\cos^2 x}
+          &= \frac {\pi}2\displaystyle\int^\pi_0 \frac{\sin^3 x}{4-\cos^2 x}dx
+        \end{align*}
+  $I = \displaystyle\int^\pi_0 \frac{\sin^3 x}{4-\cos^2 x}dx$　とする.\\
+  ここで,$\cos x = t$とすると,$dt=-\sin x dx$\\
+  \begin{align*}
+    I &= -\int^{-1}_1 \frac{1-t^2}{4-t^2}dt\\
+    &= \int^1_{-1} \left\{1-\frac{3}{4-t^2}dt\right\}\\
+    &= \int^1_{-1}\left\{1+\frac{\frac34}{t-2}-\frac{\frac34}{t+2}dt\right\}\\
+    &= \left[x+\frac34 \log\abs{t-2}-\frac34\log\abs{t+2}\right]^1_{-1}\\
+    &= 1-\frac34\log3+1+\frac34\log3\\
+    &= 2
+  \end{align*}
+  \Ans{$\displaystyle\int^\pi_0 \frac{\sin^3 x}{4-\cos^2 x}dx = \pi$}
+\end{enumerate}
