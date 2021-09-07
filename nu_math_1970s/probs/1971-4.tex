@@ -1,0 +1,50 @@
+
+\begin{problem}
+  周の長さ$a$の正$n$角形の面積$S(n)$を求め，
+$m>n$ならば$S(m)>S(n)$であることを証明せよ．
+\end{problem}
+
+半径$R$の円に内接する正$n$角形を考える．このとき，
+$R = \frac{1}{\sin \frac{\pi}n} \times \frac{a}{2n}$
+である．
+
+\begin{align*}
+  S(n) &= \frac12 \left\{ \frac{1}{\sin \frac{\pi}n} \times \frac{a}{2n} \right\}^2 \times \sin \frac{2\pi}n \times n \\
+  &= \frac{a^2}{4n \tan \frac{\pi}{n}}
+\end{align*}
+
+\begin{align*}
+  S(m)-S(n) &= \frac{a^2}{4m\tan\frac{\pi}m} - \frac{a^2}{4n\tan{\pi}n} \\
+  &= \frac{a^2}4 \left\{ \frac{1}{m\tan\frac{\pi}m} - \frac{1}{n\tan\frac{\pi}m} \right\} \\
+  &= \frac{a^2}4 \times \frac{1}{mn \tan\frac{\pi}n \tan\frac{\pi}m}
+  \left\{ n\tan\frac{\pi}{n} - m\tan{\pi}{m} \right\}
+\end{align*}
+
+$f(x) = x \tan\frac{\pi}x$とする．このとき，
+\begin{align*}
+  f'(x) &= \tan\frac{\pi}x - \frac{\pi}x \frac{1}{\cos^2 \frac{\pi}x} \\
+  &= \frac{\sin \frac{\pi}x}{\cos \frac{\pi}x} - \frac{\pi}x \frac{1}{\cos^2 \frac{\pi}x} \\
+  &= \frac{1}{\cos^2 \frac{\pi}x} \left\{ \sin \frac{\pi}x \cos \frac{\pi}x - \frac{\pi}x \right\} \\
+  &= \frac{1}{\cos^2 \frac{\pi}x} \left\{ \frac12 \sin\frac{2\pi}x - \frac{\pi}x \right\}
+\end{align*}
+であり，ここで，$\frac\pi{x} = t$とし，$f(t) = \frac12 \sin 2t - t$とすると，
+$f'(t) = \cos 2t - 1 \geq 0$である．したがって，増減表を考えると，
+\RESETKEYA
+\setkeys{zogen}{
+  hensu=t,
+  ranaa=0,ranbb=-,ranca=0,rancb=\searrow,
+  kansub=f'(t),kansuc=f(t)
+}
+\zogen(3,3)
+より，$f'(t) < 0$となるから，
+\RESETKEYA
+\setkeys{zogen}{
+  hensu=x,
+  ranaa=3,ranbb=-,rancb=\searrow
+}
+\zogen(3,3)
+を得る．したがって，$x\tan\frac{\pi}x$は単調減少関数であるから，
+$x \tan\frac{\pi}x > 0 \ (x \text{は} 3\text{以上の自然数})$より，
+$n \tan \frac{\pi}n - m\tan\frac{\pi}m > 0$となる．
+
+したがって，$S(m) > S(n)$である．\qed

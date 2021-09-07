@@ -12,22 +12,65 @@ $\displaystyle\lim_{a\to\infty}\frac{r}{a}$を求めよ．
 \begin{enumerate}
   \item
   \begin{mawarikomi}{}{
-\begin{pszahyou*}[ul=4mm](-0.5,7)(-0.5,10)
-  \tenretu*{A(5,0)}
-  \kandk\O{75}\A{105}\P
-  \Suisen\P\O\A\H
-  \Takakkei{\O\A\P}
-  \Drawline{\P\H}
-\end{pszahyou*}}
-この三角形の面積を$S$とすると，
-\begin{align*}
-  S &= \bunsuu12ah \\
-  \bunsuu12ah &= r\left(a + 2\sqrt{h^2 + \bunsuu{a^2}4}\right) \\
-  r &= \bunsuu{ah}{2\left(a + 2\sqrt{h^2 + \bunsuu{a^2}{4}}\right)}
-\end{align*}
+    \begin{pszahyou*}[ul=4mm](-0.5,7)(-0.5,10)
+      \tenretu*{A(5,0)}
+      \kandk\O{75}\A{105}\P
+      \Suisen\P\O\A\H
+      \Takakkei{\O\A\P}
+      \Drawline{\P\H}
+    \end{pszahyou*}
+  }
+  この三角形の面積を$S$とすると，
+  \begin{align*}
+    S &= \bunsuu12ah \\
+    \bunsuu12ah &= r\left(a + 2\sqrt{h^2 + \bunsuu{a^2}4}\right) \\
+    r &= \bunsuu{ah}{2\left(a + 2\sqrt{h^2 + \bunsuu{a^2}{4}}\right)}
+  \end{align*}
 \end{mawarikomi}
+
 \Ans{$r = \bunsuu{ah}{2\left(a + 2\sqrt{h^2 + \bunsuu{a^2}{4}}\right)}$}
 
-\item $ah^n = 1$より，$h^n = \bunsuu1a$，したがって，$h = \left(\bunsuu1a\right)^{\frac1{n}}$
+  \item $ah^n = 1$より，$h^n = \bunsuu1a$，したがって，$h = \left(\bunsuu1a\right)^{\frac1{n}}$
 
+  \begin{align*}
+    &\dumyeq
+    \frac{ah}{2\left( a+2\sqrt{h^2 + \frac{a^2}{4}} \right)}
+    =
+    \frac{a\left( \frac{1}{a} \right)^{\frac{1}{n}}}
+    {2\left( a + 2\sqrt{\left( \frac{1}{a} \right)^{2n} + \frac{a^2}{4}} \right)}
+    =
+    \frac{\left( \frac{1}{a} \right)^{\frac{1}{n}}}
+    {2\left( 1 + 2\sqrt{\left( \frac{1}{a} \right)^{2n+2} + \frac14} \right)} \\
+    &=
+    \frac{\left( \frac{1}{a} \right)^{\frac{1}{n}}}
+    {2\left\{ 1 - 4\left( \left( \frac{1}{a} \right)^{2n+2} + \frac14 \right) \right\}}
+    = \frac{\left( \frac{1}{a} \right)^{\frac{1}{n}}}{-8\left( \frac{1}{a} \right)^{2n+2}}
+    = -\frac18 \times \frac{\frac{1}{a^{\frac{1}{n}}}}{\frac{1}{a^{2n+2}}}\\
+    &= -\frac18 a^{2n+2-\frac{1}{n}}
+  \end{align*}
+
+  ここで，$\frac{1}{n} = 2n +2$を解いて，$n = -1 \pm \sqrt3$であるから，
+  \begin{enumerate}
+    \item $-1-\sqrt3 < n -1 + \sqrt3$のとき，
+    $\dlim{a\to\infty}-\frac18 a^{2n+2-\frac{1}{n}} = 0$
+
+    \item $n = -1 \pm \sqrt3$のとき，
+    $\dlim{a\to\infty}-\frac18 a^{2n+2-\frac{1}{n}} = -\frac18$
+
+    \item $n < -1-\sqrt3$のとき，
+    $\dlim{a\to\infty}-\frac18 a^{2n+2-\frac{1}{n}} = 0$
+
+    \item $n > -1+\sqrt3$のとき，
+    $\dlim{a\to\infty}-\frac18 a^{2n+2-\frac{1}{n}} = -\infty$
+  \end{enumerate}
+
+  したがって，(i)～(iv)より，
+
+  \Ans{$\dlim{a\to\infty}\frac{r}{a} =
+  \begin{emcases}
+    0 & (n < -1-\sqrt3, -1-\sqrt3 < n < -1+\sqrt3 のとき)\\
+    -\frac18 &(n = -1\pm\sqrt3 のとき) \\
+    -\infty &(n > -1+\sqrt3 のとき)
+  \end{emcases}
+  $}
 \end{enumerate}

@@ -1,0 +1,40 @@
+
+\begin{problem}
+  円$x^2+y^2=1$の上に1点$A$を，また円$x^2+y^2=3$の上に2点$B$，$C$をとる．
+このとき，3角形$ABC$の面積の最大値を求めよ．
+\end{problem}
+
+底辺の長さを固定し，半径1の円に内接する二等辺三角形を考える．
+このとき，三角形の面積を$S$とすると，$0<\theta<\pi$において，
+\begin{align*}
+  S &= 2 \times \frac12 \sin (\pi-\theta) + \frac12 \sin 2\theta \\
+  &= \sin\theta + \frac12 \sin 2\theta
+\end{align*}
+\begin{align*}
+  \frac{dS}{d\theta} &= \cos \theta + \cos2\theta \\
+  &= \cos\theta + 2\cos^2 \theta -1 \\
+  &= (2\cos \theta -1)(\cos \theta + 1)
+\end{align*}
+である．このとき，増減表は以下のようになる．
+\RESETKEYA
+\setkeys{zogen}{
+  hensu=\theta,
+  ranaa=(0),ranac=\frac{\pi}2,ranae=(\pi),
+  ranbb=+,ranbc=0,ranbd=-,
+  rancb=\nearrow,rancd=\searrow,
+  kansub=\frac{dS}{d\theta},kansuc=S
+}
+\zogen(3,5)
+
+よって，$\theta = \frac\pi3$のとき，最大値をとる．
+\begin{align*}
+  S = \frac{\sqrt3}2 + \frac12 \times \frac{\sqrt3}2  = \frac{3\sqrt3}4
+\end{align*}
+
+ここで，三角形ABC $\soji$ 三角形A'B'C であり，また，相似比は$\sqrt3 : 1$である．このとき，増減表は以下のようになる．よって，求める面積の最大値は，
+\begin{align*}
+  S = \frac{3\sqrt3}4 \times (\sqrt3)^2 = \frac94\sqrt3
+\end{align*}
+である．
+
+\Ans{$\frac94\sqrt3$}

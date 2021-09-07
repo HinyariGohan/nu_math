@@ -1,0 +1,32 @@
+
+\begin{problem}
+  $\alpha$を空間内のある定まった平面とし，
+空間内の3点$A$，$B$，$C$の$\alpha$への正射影をそれぞれ$A'$，$B'$，$C'$とする．
+$AB=BC=CA=1$であり，かつ，$A'$，$B'$が定点であるように3点$A$，$B$，$C$が動くとき，
+$C'$はどんな図形を描くか．
+ただし$A'B'=\cos\theta$ $\displaystyle\left( 0\leqq\theta\leqq\frac{\pi}{2} \right)$とする．
+\end{problem}
+
+平面$\alpha$を$xy$平面とし，A'B'が$x$軸上に存在するとする．
+ここで，A$''(a,0,0)$，B$''(1,0,0)$のとき，C$''$の動く範囲は$0 \leq \alpha \leq 2\pi$を用いて，C$''\left( \frac12,\frac{\sqrt{3}}2 \cos \alpha, \frac{\sqrt{3}}2 \sin \alpha \right)$と表せる．
+
+ここで，条件から，A,B,Cはそれぞれ，これと$xz$平面において$\theta$だけ回転させたものであるから，
+\[\mathrm{A}(0,0,0),\mathrm{B}(\cos \theta,0,0),\mathrm{C}\left( \frac12 \cos \theta - \frac{\sqrt{3}}2 \sin \alpha \sin \theta,\frac{\sqrt{3}}2 \cos \alpha, \frac{\sqrt{3}}2 \sin \alpha \cos \theta + \frac12 \sin \theta \right) \]
+
+また，C$'$ は C の$xy$平面への正射影であるから，
+\[\mathrm{C}'\left( \frac12 \cos \theta + \frac{\sqrt3}2 \sin\alpha \sin\theta, \frac{\sqrt3}{2}\cos\alpha, 0 \right)\]
+より，
+\begin{enumerate}[(i)]
+  \item $\theta = 0$のとき
+
+  $x= \frac12, y=\frac{\sqrt3}{2}\cos\alpha$であるから，$x=\frac12, -\frac{\sqrt3}{2} \leq y \leq \frac{\sqrt3}{2}$の線分となる．
+
+  \item $\theta \neq 0$のとき
+
+  $\frac{\left( x-\frac12 \cos\theta \right)}{\sin\theta} = -\frac{\sqrt3}{2}\sin\alpha, y = \frac{\sqrt3}{2}\cos\alpha$より，
+  $\frac{\left( x-\frac12 \cos\theta \right)^2}{\sin^2\theta} + y^2 = \frac34$の楕円となる．
+\end{enumerate}
+
+よって，(i),(ii)から，C$'$が描く図形は，
+
+\Ans{$\trenritu{x=\frac12, -\frac{\sqrt3}{2} \leq y \leq \frac{\sqrt3}{2} の線分 (\theta = 0 のとき) \\ \frac{\left( x-\frac12 \cos\theta \right)^2}{\sin^2\theta} + y^2 = \frac34 の楕円 (\theta \neq 0 のとき)}$}

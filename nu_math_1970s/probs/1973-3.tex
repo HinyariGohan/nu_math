@@ -1,0 +1,36 @@
+
+\begin{problem}
+  放物線$y=x^2$の上に2点$P$，$Q$があって，
+線分$PQ$の中点が直線$y=x+1$の上にあるとき，
+このような直線$PQ$は，
+すべてある一定の放物線$y=ax^2+bx+c$に接することを示し，
+$a$，$b$，$c$の値を求めよ．
+\end{problem}
+
+\ten{P}{p}{p^2},\ten{Q}{q}{q^2}，また$p<q$とする．
+このとき，$(x,y) = \left( \frac{p+q}{2}, \frac{p^2+q^2}{2} \right)$より，
+$\frac{p^2+q^2}{2} = \frac{p+q}{2}+1$を考えると，$(p+q)^2 -2pq = (p+q)+2$を得る．
+
+さて，直線PQの方程式を求めると，
+\begin{align*}
+  \mathrm{PQ}: y &= (p+q)x -pq \\
+  &= (p+q)x- \frac{(p+q)^2}{2} + \frac{p+q}{2} + 1
+\end{align*}
+であり，PQがある放物線に接することを示す．
+
+$y = ax^2 + bx + c, y' = 2ax + b$より，$x=t$における接線の方程式を考えると，
+\begin{align*}
+  y &= (2at+b)(x-t) + at^2 + bt + c \\
+  &= (2at+b)x - at^2 + c
+\end{align*}
+より，$\trenritu{2at + b = p+q \\ -at^2 + c = -\frac{(p+q)^2}{2} + \frac{p+q}{2} + 1}$を満たすから，これを整理して，
+\begin{align*}
+  2(-at^2 + c) = -(2at + b)^2 + 2at + b + 2 \\
+  (4a^2- 2a)t^2 + (4ab - 2a)t + 2c + b^2 + b - 2 = 0
+\end{align*}
+が任意の$t$に対して成立するから，
+$\trenritu{2a(2a-1) = 0 \\ 2a(2b-1) = 0 \\ 2c + b^2 + b - 2 = 0}$であり，
+$a,b,c$を求めると，$a= \frac12, b = \frac12 , c = \frac58$がこれを満たす．
+よって，$y = \frac12 x^2 + \frac12 x + \frac58$に接する．
+
+\Ans{$a = \frac12, b = \frac12, c = \frac58$}

@@ -1,0 +1,42 @@
+
+\begin{problem}
+  次のおのおのを証明せよ．
+\begin{enumerate}
+\item $n$ $(\geqq4)$個の点があって，
+その中からどの4個の点をとってもそれらを通る円がかけるとき，
+この$n$個の点は1つの円周上にある．
+\item 平面上に4角形$S$があって，
+$S$の任意の2点の距離が1をこえないならば，
+$S$の面積は$\displaystyle\frac{1}{2}$をこえない．
+\end{enumerate}
+\end{problem}
+
+\begin{enumerate}
+  \item $h$個の点に，1から$n$までの番号を振り分ける．
+  次の点1,2,3と点4～$n$のそれぞれを通る円について考える．
+  ここで，任意の3点を通る円は1通りしか存在しないため，点4～$n$は
+  それぞれ点1,2,3を通る1通りの円上に存在するため，この$n$個の点は
+  1つの円上にあることが示された．
+  \qed
+
+  \item \begin{enumerate}
+    \item すべての頂点の角の大きさが$180\degree$より小さいとき，
+    \[\mathrm{OA} = a, \mathrm{OB} = b, \mathrm{OC} = c,
+    \mathrm{OD} = d\]
+    とする．四角形の面積を$S$とすると，
+    \begin{align*}
+      S &= \frac12 ab\sin\theta + \frac12 bc\sin\theta + \frac12 cd\sin\theta + \frac 12da\sin\theta \\
+      &= \frac12(a+c)(b+d)\sin\theta \\
+      &= \frac12 \zettaiti{AC}\zettaiti{BD} \sin\theta
+    \end{align*}
+    となる．
+
+    ここで，任意の2点の距離が1を超えないことから，$S < \frac12\sin\theta$より，
+    $S<\frac12$となる．
+
+    \item ある角の大きさが$180\degree$より大きい四角形のとき，
+    四角形の面積$S$は，$S< \frac12 \mathrm{AB}\cdot\mathrm{BD}\sin\kaku{B}$より，$S < \frac12 \sin\kaku{B}$となるから，$S < \frac12$である．
+  \end{enumerate}
+
+  よって，(i),(ii)から，すべての三角形に対して任意の2点の長さが1を超えないならば，$S$の面積は$\frac12$を超えない． \qed
+\end{enumerate}

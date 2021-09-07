@@ -1,0 +1,75 @@
+
+\begin{problem}
+  $l$，$m$，$n$は整数で，$lmn\neq0$のとき
+$\displaystyle\int_0^{2x}\cos lx\cos mx\cos nxdx$の値を求めよ．
+\end{problem}
+
+\begin{align*}
+  &\dumyeq \cos lx  \cos mx  \cos nx \\
+  &= \frac12 \left\{ \cos (l+m)x + \cos(l-m)x \right\}\cos nx\\
+  &= \frac14
+  \left\{ \cos (l+m+x)x + \cos (l+m-n)x + \cos (l-m+n)x + \cos (l-m-n)x \right\}
+\end{align*}
+より，
+\begin{enumerate}[(i)]
+  \item $l+m-n = 0$のとき，\\
+  $\cos lx  \cos mx  \cos nx = \frac14 \left\{ \cos 2(l+m)x + \cos 2lx + \cos (-2m)x + 1 \right\}$
+  であるから，
+  \begin{align*}
+    &\dumyeq \dint{0}{2\pi} \cos lx \cos mx \cos nx \,dx \\
+    &= \frac14 \dint{0}{2\pi}
+    \left\{ \cos 2(l+m)x + \cos 2lx + \cos(-2m)x + 1 \right\}\,dx \\
+    &= \frac14 \teisekibun{\frac{1}{2(l+m)} \sin 2(l+m)x + \frac{1}{2l} \sin 2lx - \frac{1}{2m}\sin (-2m)x + x}{0}{2\pi} \\
+    &= \frac{\pi}2
+  \end{align*}
+
+  \item $l-m+n = 0$のとき，\\
+  $\cos lx \cos mx \cos nx = \frac14 \left\{ \cos 2(l+n)x + \cos 2lx + \cos(-2n)x + 1 \right\}$
+  であるから，
+  \begin{align*}
+    &\dumyeq \dint{0}{2\pi} \cos lx \cos mx \cos nx \, dx \\
+    &= \frac14 \dint{0}{2\pi} \left\{ \cos 2(l+n)x + \cos 2lx + \cos (-2n)x + 1 \right\}\, dx \\
+    &= \frac14 \teisekibun{\frac{1}{2(l+n)} \sin 2(l+n)x + \frac{1}{2l}\sin 2lx - \frac{1}{2n} \sin (-2n)x + x}{0}{2\pi}\\
+    &= \frac{\pi}2
+  \end{align*}
+
+  \item $l-m-n = 0$のとき，\\
+  $\cos lx \cos mx \cos nx = \cos 2lx + \cos 2mx + \cos 2nx + 1$
+  であるから，
+  \begin{align*}
+    &\dumyeq \dint{0}{2\pi} \cos lx \cos mx \cos nx \, dx \\
+    &= \frac14\dint{0}{2\pi}
+    \left\{ \cos 2lx + \cos 2mx + \cos 2nx + 1 \right\} \\
+    &= \frac14 \teisekibun{\frac{1}{2l} \sin 2lx + \frac{1}{2m} \sin 2mx + \frac{1}{2n} \sin 2nx + x}{0}{2\pi} \\
+    &= \frac{\pi}2
+  \end{align*}
+
+  \item $l+m+n = 0$のとき，\\
+  $\cos lx \cos mx \cos nx = \cos (-2n)x + \cos(-2n)x + \cos(2l)x + 1$
+  であるから，
+  \begin{align*}
+    &\dumyeq \dint{0}{2\pi} \cos lx \cos mx \cos nx \, dx \\
+    &= \frac14 \dint{0}{2\pi}
+    \left\{ \cos (-2n)x + \cos(-2n)x + \cos(2l)x + 1 \right\} \\
+    &= \frac14 \teisekibun{\frac{1}{-2n}\cos(-2n)x + \frac{1}{-2m}\sin(-2m)x + \frac{1}{2l} \sin (2l)x + x}{0}{2\pi} \\
+    &= \frac{\pi}{2}
+  \end{align*}
+
+  \item $l+m+n, l+m-n, l-m+n, l-m-n \neq 0$のとき，
+  \begin{align*}
+    \dumyeq& \dint{0}{2\pi} \cos lx \cos mx \cos nx \, dx \\
+    &= \frac14 \left\{ \cos (l+m+x)x + \cos (l+m-n)x + \cos (l-m+n)x + \cos (l-m-n)x \right\} \\
+    &= 0
+  \end{align*}
+\end{enumerate}
+
+(i)～(v)より，
+
+\hfill
+$\dint{0}{2\pi} \cos lx\cos mx\cos nx\,dx
+= \begin{emcases}
+\frac\pi2 &(l+m+n = 0 または l+m-n=0または\\
+& l-m+n = 0 まあたは l-m-n = 0 のとき)\\
+0 &(l+m+n \neq 0 かつ l+m-n \neq 0 かつ \\
+& l-m+n \neq 0 かつ l-m-n \neq 0)
+\end{emcases}$
